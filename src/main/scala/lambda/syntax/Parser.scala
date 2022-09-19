@@ -60,7 +60,7 @@ object Parser :
   /** (Recursive) Parser for a command in the while language */
   def expression: P[Expression] = P.recursive(exprRec =>
     def lit:P[Expression] = P.recursive(litRec =>// lambda, int, or var
-      ((char('\\')~sps)*>varName~(string("->").surroundedBy(sps)*>litRec))
+      ((char('\\')~sps)*>varName~(string("->").surroundedBy(sps)*>exprRec))
         .map(x => Lam(x._1,x._2)) |
       (char('-')*>digits).map(x=>Val(0-x.toInt)) |
       digits.map(x=>Val(x.toInt)) |
