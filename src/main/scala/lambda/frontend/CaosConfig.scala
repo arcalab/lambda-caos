@@ -4,7 +4,7 @@ import caos.common.Example
 import caos.frontend.Configurator
 import caos.frontend.Configurator.*
 import caos.frontend.widgets.WidgetInfo
-import caos.view.{Mermaid, Text, View}
+import caos.view.{Mermaid, Text, View, Code}
 import lambda.backend.*
 import lambda.syntax.Program.Term
 import lambda.syntax.{Program, Show}
