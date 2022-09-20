@@ -1,8 +1,8 @@
 package lambda.syntax
 
 import lambda.syntax.Program
-import Program.Expression
-import Expression.*
+import Program.Term
+import Term.*
 
 
 
@@ -11,7 +11,7 @@ import Expression.*
  */
 object Show:
   /** Pretty expression */
-  def apply(e: Expression): String = e match
+  def apply(e: Term): String = e match
     case Var(x) => x
     case App(e1, e2) => s"(${apply(e1)}) (${apply(e2)})"
     case Lam(x, e) => s"\\$x -> ${apply(e)}"

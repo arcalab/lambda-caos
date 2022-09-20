@@ -8,14 +8,14 @@ package lambda.syntax
 object Program:
 
   /** A lambda expression */
-  enum Expression:
+  enum Term:
     case Var(x:String)
-    case App(e1:Expression, e2:Expression)
-    case Lam(x:String, e:Expression)
+    case App(e1:Term, e2:Term)
+    case Lam(x:String, e:Term)
     ///
     case Val(n:Int)
-    case Add(e1:Expression, e2:Expression)
-    case If0(e1:Expression, e2:Expression, e3:Expression)
+    case Add(e1:Term, e2:Term)
+    case If0(e1:Term, e2:Term, e3:Term)
 
 
 
@@ -24,8 +24,8 @@ object Program:
   //////////////////////////////
 
   object Examples:
-    import Program.Expression._
+    import Program.Term._
 
-    val p1: Expression =
+    val p1: Term =
       App( Lam("x",App(Var("x"),Var("x"))) , Lam("y",Var("y")) )
 

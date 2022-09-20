@@ -6,15 +6,15 @@ import cats.syntax.all.*
 import P.*
 import cats.data.NonEmptyList
 import cats.parse.Rfc5234.sp
-import lambda.syntax.Program.Expression
-import lambda.syntax.Program.Expression.*
+import lambda.syntax.Program.Term
+import lambda.syntax.Program.Term.*
 
 import scala.sys.error
 
 object Parser :
 
   /** Parse a command  */
-  def parseProgram(str:String):Expression =
+  def parseProgram(str:String):Term =
     pp(program,str) match {
       case Left(e) => error(e)
       case Right(c) => c
@@ -55,11 +55,11 @@ object Parser :
 
 
   /** A program is a command with possible spaces or comments around. */
-  def program: P[Expression] = expression.surroundedBy(sps)
+  def program: P[Term] = expression.surroundedBy(sps)
 
   /** (Recursive) Parser for a command in the while language */
-  def expression: P[Expression] = P.recursive(exprRec =>
-    def lit:P[Expression] = P.recursive(litRec =>// lambda, int, or var
+  def expression: P[Term] = P.recursive(exprRec =>
+    def lit:P[Term] = P.recursive(litRec =>// lambda, int, or var
       ((char('\\')~sps)*>varName~(string("->").surroundedBy(sps)*>exprRec))
         .map(x => Lam(x._1,x._2)) |
       (char('-')*>digits).map(x=>Val(0-x.toInt)) |
@@ -69,7 +69,7 @@ object Parser :
         .map(x => If0(x._1._1,x._1._2,x._2)) |
       varName.map(Var.apply)
     )
-    def rest:P[Expression => Expression] =
+    def rest:P[Term => Term] =
       ((char('+')~sps)*>exprRec)
         .map(e2 => (e1 => Add(e1,e2))) |
       exprRec

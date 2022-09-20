@@ -3,13 +3,13 @@ package lambda.backend
 import caos.sos.SOS
 import lambda.backend.Semantics.St
 import lambda.syntax.Program
-import lambda.syntax.Program.Expression
-import Expression.*
+import lambda.syntax.Program.Term
+import Term.*
 
 /** Small-step semantics for both commands and boolean+integer expressions.  */
 object Semantics extends SOS[String,St]:
 
-  type St = Expression
+  type St = Term
 
   /** When is a state terminal: there are no states marked as terminal */
   override def accepting(s: St): Boolean = false
@@ -45,13 +45,13 @@ object Semantics extends SOS[String,St]:
         )
 
 
-private def subst(e:Expression, x:String, by:Expression): Expression = e match
-    case Var(x2) => if x==x2 then by else e
-    case App(e1, e2) => App(subst(e1,x,by),subst(e2,x,by))
-    case Lam(x2, e1) => if (x==x2) then e else Lam(x2,subst(e1,x,by))
-    case Val(n) => e
-    case Add(e1, e2) => Add(subst(e1,x,by),subst(e2,x,by))
-    case If0(e1,e2,e3) => If0(subst(e1,x,by),subst(e2,x,by),subst(e3,x,by))
+  def subst(e:Term, x:String, by:Term): Term = e match
+      case Var(x2) => if x==x2 then by else e
+      case App(e1, e2) => App(subst(e1,x,by),subst(e2,x,by))
+      case Lam(x2, e1) => if (x==x2) then e else Lam(x2,subst(e1,x,by))
+      case Val(n) => e
+      case Add(e1, e2) => Add(subst(e1,x,by),subst(e2,x,by))
+      case If0(e1,e2,e3) => If0(subst(e1,x,by),subst(e2,x,by),subst(e3,x,by))
 
 
 

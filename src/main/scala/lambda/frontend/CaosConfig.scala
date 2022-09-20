@@ -6,15 +6,15 @@ import caos.frontend.Configurator.*
 import caos.frontend.widgets.WidgetInfo
 import caos.view.{Mermaid, Text, View}
 import lambda.backend.*
-import lambda.syntax.Program.Expression
+import lambda.syntax.Program.Term
 import lambda.syntax.{Program, Show}
 
 /** Object used to configure which analysis appear in the browser */
-object CaosConfig extends Configurator[Expression]:
+object CaosConfig extends Configurator[Term]:
   val name = "Animator of a simple lambda calculus language"
   override val languageName: String = "Lambda Calculus with addition"
 
-  val parser: String=>Expression =
+  val parser: String=>Term =
     lambda.syntax.Parser.parseProgram
 
   val examples = List(
@@ -40,4 +40,9 @@ object CaosConfig extends Configurator[Expression]:
       e=>e, Semantics, e => Show(e), Text),
     "Build LTS" -> lts(
       e=>e, Semantics, x=>Show(x)),
+    "Build LTS - Lazy Evaluation" -> lts(
+      e => e, LazySemantics, x => Show(x)),
+    "Build LTS - Strict Evaluation" -> lts(
+      e => e, StrictSemantics, x => Show(x)),
+
   )
