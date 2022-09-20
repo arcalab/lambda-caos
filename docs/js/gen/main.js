@@ -1968,7 +1968,7 @@ function $p_Lcaos_sos_SOS$__aux$1__Lcaos_sos_SOS__F1__F1__sr_IntRef__sr_ObjectRe
       var next2 = new $c_sr_ObjectRef(elem);
       var elem$1 = (((("\n  " + $p_Lcaos_sos_SOS$__ids$1__sr_IntRef__sr_ObjectRef__O__I($thiz, i$2, _ids$2, x47)) + "[") + $p_Lcaos_sos_SOS$__fix$1__T__T($thiz, $as_T(showSt$1.apply__O__O(x47)))) + "];");
       var res = new $c_sr_ObjectRef(elem$1);
-      sos$5.next__Llambda_syntax_Program$Expression__sci_Set($as_Llambda_syntax_Program$Expression(x47)).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$2$1) => ((x$1) => {
+      sos$5.next__Llambda_syntax_Program$Term__sci_Set($as_Llambda_syntax_Program$Term(x47)).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$2$1) => ((x$1) => {
         var x$1$1 = $as_T2(x$1);
         return ((x$1$1 !== null) && (x$1$1._1__O(), x$1$1._2__O(), true))
       }))($thiz))).foreach__F1__V(new $c_sjsr_AnonFunction1(((this$3$1, showSt$1$2, showAct$1$2, i$2$3, _ids$2$3, st$3, next2$2, res$2) => ((x$1$2) => {
@@ -9082,80 +9082,6 @@ var $d_ju_regex_PatternCompiler$CompiledCharClass = new $TypeData().initClass({
   O: 1
 });
 $c_ju_regex_PatternCompiler$CompiledCharClass.prototype.$classData = $d_ju_regex_PatternCompiler$CompiledCharClass;
-/** @constructor */
-function $c_Llambda_backend_Semantics$package$() {
-  /*<skip>*/
-}
-$c_Llambda_backend_Semantics$package$.prototype = new $h_O();
-$c_Llambda_backend_Semantics$package$.prototype.constructor = $c_Llambda_backend_Semantics$package$;
-/** @constructor */
-function $h_Llambda_backend_Semantics$package$() {
-  /*<skip>*/
-}
-$h_Llambda_backend_Semantics$package$.prototype = $c_Llambda_backend_Semantics$package$.prototype;
-$c_Llambda_backend_Semantics$package$.prototype.subst__Llambda_syntax_Program$Expression__T__Llambda_syntax_Program$Expression__Llambda_syntax_Program$Expression = (function(e, x, by) {
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$Var)) {
-    var x$1 = $as_Llambda_syntax_Program$Expression$Var(e);
-    var x117 = x$1.Llambda_syntax_Program$Expression$Var__f_x;
-    return ((x === x117) ? by : e)
-  };
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$App)) {
-    var x$1$1 = $as_Llambda_syntax_Program$Expression$App(e);
-    var x113 = x$1$1.Llambda_syntax_Program$Expression$App__f_e1;
-    var x114 = x$1$1.Llambda_syntax_Program$Expression$App__f_e2;
-    var e1 = $m_Llambda_backend_Semantics$package$().subst__Llambda_syntax_Program$Expression__T__Llambda_syntax_Program$Expression__Llambda_syntax_Program$Expression(x113, x, by);
-    var e2 = $m_Llambda_backend_Semantics$package$().subst__Llambda_syntax_Program$Expression__T__Llambda_syntax_Program$Expression__Llambda_syntax_Program$Expression(x114, x, by);
-    return new $c_Llambda_syntax_Program$Expression$App(e1, e2)
-  };
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$Lam)) {
-    var x$1$2 = $as_Llambda_syntax_Program$Expression$Lam(e);
-    var x109 = x$1$2.Llambda_syntax_Program$Expression$Lam__f_x;
-    var x110 = x$1$2.Llambda_syntax_Program$Expression$Lam__f_e;
-    if ((x === x109)) {
-      return e
-    } else {
-      var e$1 = $m_Llambda_backend_Semantics$package$().subst__Llambda_syntax_Program$Expression__T__Llambda_syntax_Program$Expression__Llambda_syntax_Program$Expression(x110, x, by);
-      return new $c_Llambda_syntax_Program$Expression$Lam(x109, e$1)
-    }
-  };
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$Val)) {
-    var x$1$3 = $as_Llambda_syntax_Program$Expression$Val(e);
-    return e
-  };
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$Add)) {
-    var x$1$4 = $as_Llambda_syntax_Program$Expression$Add(e);
-    var x102 = x$1$4.Llambda_syntax_Program$Expression$Add__f_e1;
-    var x103 = x$1$4.Llambda_syntax_Program$Expression$Add__f_e2;
-    var e1$1 = $m_Llambda_backend_Semantics$package$().subst__Llambda_syntax_Program$Expression__T__Llambda_syntax_Program$Expression__Llambda_syntax_Program$Expression(x102, x, by);
-    var e2$1 = $m_Llambda_backend_Semantics$package$().subst__Llambda_syntax_Program$Expression__T__Llambda_syntax_Program$Expression__Llambda_syntax_Program$Expression(x103, x, by);
-    return new $c_Llambda_syntax_Program$Expression$Add(e1$1, e2$1)
-  };
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$If0)) {
-    var x$1$5 = $as_Llambda_syntax_Program$Expression$If0(e);
-    var x97 = x$1$5.Llambda_syntax_Program$Expression$If0__f_e1;
-    var x98 = x$1$5.Llambda_syntax_Program$Expression$If0__f_e2;
-    var x99 = x$1$5.Llambda_syntax_Program$Expression$If0__f_e3;
-    var e1$2 = $m_Llambda_backend_Semantics$package$().subst__Llambda_syntax_Program$Expression__T__Llambda_syntax_Program$Expression__Llambda_syntax_Program$Expression(x97, x, by);
-    var e2$2 = $m_Llambda_backend_Semantics$package$().subst__Llambda_syntax_Program$Expression__T__Llambda_syntax_Program$Expression__Llambda_syntax_Program$Expression(x98, x, by);
-    var e3 = $m_Llambda_backend_Semantics$package$().subst__Llambda_syntax_Program$Expression__T__Llambda_syntax_Program$Expression__Llambda_syntax_Program$Expression(x99, x, by);
-    return new $c_Llambda_syntax_Program$Expression$If0(e1$2, e2$2, e3)
-  };
-  throw new $c_s_MatchError(e)
-});
-var $d_Llambda_backend_Semantics$package$ = new $TypeData().initClass({
-  Llambda_backend_Semantics$package$: 0
-}, false, "lambda.backend.Semantics$package$", {
-  Llambda_backend_Semantics$package$: 1,
-  O: 1
-});
-$c_Llambda_backend_Semantics$package$.prototype.$classData = $d_Llambda_backend_Semantics$package$;
-var $n_Llambda_backend_Semantics$package$;
-function $m_Llambda_backend_Semantics$package$() {
-  if ((!$n_Llambda_backend_Semantics$package$)) {
-    $n_Llambda_backend_Semantics$package$ = new $c_Llambda_backend_Semantics$package$()
-  };
-  return $n_Llambda_backend_Semantics$package$
-}
 function $s_Llambda_frontend_Main__main__AT__V(args) {
   $m_Lcaos_frontend_Site$().initSite__Lcaos_frontend_Configurator__V($m_Llambda_frontend_CaosConfig$())
 }
@@ -9175,8 +9101,8 @@ function $p_Llambda_syntax_Parser$__lit$1__Lcats_parse_Parser__Lcats_parse_Parse
     var fn = new $c_sjsr_AnonFunction1(((this$9) => ((x) => {
       var x$1 = $as_T2(x);
       var x$2 = $as_T(x$1._1__O());
-      var e = $as_Llambda_syntax_Program$Expression(x$1._2__O());
-      return new $c_Llambda_syntax_Program$Expression$Lam(x$2, e)
+      var e = $as_Llambda_syntax_Program$Term(x$1._2__O());
+      return new $c_Llambda_syntax_Program$Term$Lam(x$2, e)
     }))(this$1));
     var this$17 = $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$11, fn);
     var this$16 = $m_Lcats_parse_Parser$().char__C__Lcats_parse_Parser(45).$times$greater__Lcats_parse_Parser0__Lcats_parse_Parser($m_Lcats_parse_Numbers$().Lcats_parse_Numbers$__f_digits);
@@ -9184,7 +9110,7 @@ function $p_Llambda_syntax_Parser$__lit$1__Lcats_parse_Parser__Lcats_parse_Parse
       var x$3 = $as_T(x$2$1);
       var this$14 = $m_jl_Integer$();
       var n = ((-this$14.parseInt__T__I__I(x$3, 10)) | 0);
-      return new $c_Llambda_syntax_Program$Expression$Val(n)
+      return new $c_Llambda_syntax_Program$Term$Val(n)
     }))(this$1));
     var that$2 = $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$16, fn$1);
     var this$23 = this$17.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$2);
@@ -9193,7 +9119,7 @@ function $p_Llambda_syntax_Parser$__lit$1__Lcats_parse_Parser__Lcats_parse_Parse
       var x$4 = $as_T(x$3$1);
       var this$20 = $m_jl_Integer$();
       var n$1 = this$20.parseInt__T__I__I(x$4, 10);
-      return new $c_Llambda_syntax_Program$Expression$Val(n$1)
+      return new $c_Llambda_syntax_Program$Term$Val(n$1)
     }))(this$1));
     var that$3 = $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$22, fn$2);
     var this$24 = this$23.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$3);
@@ -9213,17 +9139,17 @@ function $p_Llambda_syntax_Parser$__lit$1__Lcats_parse_Parser__Lcats_parse_Parse
     var this$35 = $$x3.$times$greater__Lcats_parse_Parser0__Lcats_parse_Parser(new $c_Lcats_parse_Parser$Impl$Prod(this$31, litRec$1));
     var fn$3 = new $c_sjsr_AnonFunction1(((this$4$1) => ((x$4$1) => {
       var x$5 = $as_T2(x$4$1);
-      var e1 = $as_Llambda_syntax_Program$Expression($as_T2(x$5._1__O())._1__O());
-      var e2 = $as_Llambda_syntax_Program$Expression($as_T2(x$5._1__O())._2__O());
-      var e3 = $as_Llambda_syntax_Program$Expression(x$5._2__O());
-      return new $c_Llambda_syntax_Program$Expression$If0(e1, e2, e3)
+      var e1 = $as_Llambda_syntax_Program$Term($as_T2(x$5._1__O())._1__O());
+      var e2 = $as_Llambda_syntax_Program$Term($as_T2(x$5._1__O())._2__O());
+      var e3 = $as_Llambda_syntax_Program$Term(x$5._2__O());
+      return new $c_Llambda_syntax_Program$Term$If0(e1, e2, e3)
     }))(this$1));
     var that$7 = $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$35, fn$3);
     var this$39 = this$36.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$7);
     var this$38 = this$1.varName__Lcats_parse_Parser();
     var fn$4 = new $c_sjsr_AnonFunction1(((this$5$1) => ((x$5$1) => {
       var x$6 = $as_T(x$5$1);
-      return new $c_Llambda_syntax_Program$Expression$Var(x$6)
+      return new $c_Llambda_syntax_Program$Term$Var(x$6)
     }))(this$1));
     var that$8 = $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$38, fn$4);
     return this$39.orElse__Lcats_parse_Parser__Lcats_parse_Parser(that$8)
@@ -9235,18 +9161,18 @@ function $p_Llambda_syntax_Parser$__rest$1__Lcats_parse_Parser__Lcats_parse_Pars
   $m_Lcats_parse_Parser$();
   var this$7 = new $c_Lcats_parse_Parser$Impl$Prod(this$1, that).$times$greater__Lcats_parse_Parser0__Lcats_parse_Parser(exprRec$3);
   var fn = new $c_sjsr_AnonFunction1(((this$4) => ((e2) => {
-    var e2$1 = $as_Llambda_syntax_Program$Expression(e2);
+    var e2$1 = $as_Llambda_syntax_Program$Term(e2);
     return new $c_sjsr_AnonFunction1(((this$5, e2$2) => ((e1) => {
-      var e1$1 = $as_Llambda_syntax_Program$Expression(e1);
-      return new $c_Llambda_syntax_Program$Expression$Add(e1$1, e2$2)
+      var e1$1 = $as_Llambda_syntax_Program$Term(e1);
+      return new $c_Llambda_syntax_Program$Term$Add(e1$1, e2$2)
     }))(this$4, e2$1))
   }))($thiz));
   var this$10 = $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(this$7, fn);
   var fn$1 = new $c_sjsr_AnonFunction1(((this$2$1) => ((e2$2$1) => {
-    var e2$3 = $as_Llambda_syntax_Program$Expression(e2$2$1);
+    var e2$3 = $as_Llambda_syntax_Program$Term(e2$2$1);
     return new $c_sjsr_AnonFunction1(((this$8, e2$2$2) => ((e1$2) => {
-      var e1$3 = $as_Llambda_syntax_Program$Expression(e1$2);
-      return new $c_Llambda_syntax_Program$Expression$App(e1$3, e2$2$2)
+      var e1$3 = $as_Llambda_syntax_Program$Term(e1$2);
+      return new $c_Llambda_syntax_Program$Term$App(e1$3, e2$2$2)
     }))(this$2$1, e2$3))
   }))($thiz));
   var that$1 = $m_Lcats_parse_Parser$().map__Lcats_parse_Parser__F1__Lcats_parse_Parser(exprRec$3, fn$1);
@@ -9294,7 +9220,7 @@ function $h_Llambda_syntax_Parser$() {
   /*<skip>*/
 }
 $h_Llambda_syntax_Parser$.prototype = $c_Llambda_syntax_Parser$.prototype;
-$c_Llambda_syntax_Parser$.prototype.parseProgram__T__Llambda_syntax_Program$Expression = (function(str) {
+$c_Llambda_syntax_Parser$.prototype.parseProgram__T__Llambda_syntax_Program$Term = (function(str) {
   var this$1 = this.expression__Lcats_parse_Parser();
   var b = this.Llambda_syntax_Parser$__f_sps;
   var x1 = this.pp__Lcats_parse_Parser__T__s_util_Either(this$1.between__Lcats_parse_Parser0__Lcats_parse_Parser0__Lcats_parse_Parser(b, b), str);
@@ -9303,7 +9229,7 @@ $c_Llambda_syntax_Parser$.prototype.parseProgram__T__Llambda_syntax_Program$Expr
     $m_s_sys_package$().error__T__E(e)
   };
   if ((x1 instanceof $c_s_util_Right)) {
-    var c = $as_Llambda_syntax_Program$Expression($as_s_util_Right(x1).s_util_Right__f_value);
+    var c = $as_Llambda_syntax_Program$Term($as_s_util_Right(x1).s_util_Right__f_value);
     return c
   };
   throw new $c_s_MatchError(x1)
@@ -9391,8 +9317,8 @@ $c_Llambda_syntax_Parser$.prototype.expression__Lcats_parse_Parser = (function()
     var fn = new $c_sjsr_AnonFunction1(((this$5) => ((x) => {
       var x$1 = $as_T2(x);
       var this$6 = $as_s_Option(x$1._2__O());
-      return $as_Llambda_syntax_Program$Expression($as_F1((this$6.isEmpty__Z() ? new $c_sjsr_AnonFunction1(((this$7) => ((y) => {
-        var y$1 = $as_Llambda_syntax_Program$Expression(y);
+      return $as_Llambda_syntax_Program$Term($as_F1((this$6.isEmpty__Z() ? new $c_sjsr_AnonFunction1(((this$7) => ((y) => {
+        var y$1 = $as_Llambda_syntax_Program$Term(y);
         return y$1
       }))(this$5)) : this$6.get__O())).apply__O__O(x$1._1__O()))
     }))(this$1));
@@ -9424,41 +9350,41 @@ function $h_Llambda_syntax_Show$() {
   /*<skip>*/
 }
 $h_Llambda_syntax_Show$.prototype = $c_Llambda_syntax_Show$.prototype;
-$c_Llambda_syntax_Show$.prototype.apply__Llambda_syntax_Program$Expression__T = (function(e) {
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$Var)) {
-    var x$1 = $as_Llambda_syntax_Program$Expression$Var(e);
-    var x24 = x$1.Llambda_syntax_Program$Expression$Var__f_x;
+$c_Llambda_syntax_Show$.prototype.apply__Llambda_syntax_Program$Term__T = (function(e) {
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Var)) {
+    var x$1 = $as_Llambda_syntax_Program$Term$Var(e);
+    var x24 = x$1.Llambda_syntax_Program$Term$Var__f_x;
     return x24
   };
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$App)) {
-    var x$1$1 = $as_Llambda_syntax_Program$Expression$App(e);
-    var x20 = x$1$1.Llambda_syntax_Program$Expression$App__f_e1;
-    var x21 = x$1$1.Llambda_syntax_Program$Expression$App__f_e2;
-    return (((("(" + this.apply__Llambda_syntax_Program$Expression__T(x20)) + ") (") + this.apply__Llambda_syntax_Program$Expression__T(x21)) + ")")
+  if ((e instanceof $c_Llambda_syntax_Program$Term$App)) {
+    var x$1$1 = $as_Llambda_syntax_Program$Term$App(e);
+    var x20 = x$1$1.Llambda_syntax_Program$Term$App__f_e1;
+    var x21 = x$1$1.Llambda_syntax_Program$Term$App__f_e2;
+    return (((("(" + this.apply__Llambda_syntax_Program$Term__T(x20)) + ") (") + this.apply__Llambda_syntax_Program$Term__T(x21)) + ")")
   };
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$Lam)) {
-    var x$1$2 = $as_Llambda_syntax_Program$Expression$Lam(e);
-    var x16 = x$1$2.Llambda_syntax_Program$Expression$Lam__f_x;
-    var x17 = x$1$2.Llambda_syntax_Program$Expression$Lam__f_e;
-    return ((("\\" + x16) + " -> ") + this.apply__Llambda_syntax_Program$Expression__T(x17))
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Lam)) {
+    var x$1$2 = $as_Llambda_syntax_Program$Term$Lam(e);
+    var x16 = x$1$2.Llambda_syntax_Program$Term$Lam__f_x;
+    var x17 = x$1$2.Llambda_syntax_Program$Term$Lam__f_e;
+    return ((("\\" + x16) + " -> ") + this.apply__Llambda_syntax_Program$Term__T(x17))
   };
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$Val)) {
-    var x$1$3 = $as_Llambda_syntax_Program$Expression$Val(e);
-    var x13 = x$1$3.Llambda_syntax_Program$Expression$Val__f_n;
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Val)) {
+    var x$1$3 = $as_Llambda_syntax_Program$Term$Val(e);
+    var x13 = x$1$3.Llambda_syntax_Program$Term$Val__f_n;
     return ("" + x13)
   };
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$Add)) {
-    var x$1$4 = $as_Llambda_syntax_Program$Expression$Add(e);
-    var x9 = x$1$4.Llambda_syntax_Program$Expression$Add__f_e1;
-    var x10 = x$1$4.Llambda_syntax_Program$Expression$Add__f_e2;
-    return (((("(" + this.apply__Llambda_syntax_Program$Expression__T(x9)) + ") + (") + this.apply__Llambda_syntax_Program$Expression__T(x10)) + ")")
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Add)) {
+    var x$1$4 = $as_Llambda_syntax_Program$Term$Add(e);
+    var x9 = x$1$4.Llambda_syntax_Program$Term$Add__f_e1;
+    var x10 = x$1$4.Llambda_syntax_Program$Term$Add__f_e2;
+    return (((("(" + this.apply__Llambda_syntax_Program$Term__T(x9)) + ") + (") + this.apply__Llambda_syntax_Program$Term__T(x10)) + ")")
   };
-  if ((e instanceof $c_Llambda_syntax_Program$Expression$If0)) {
-    var x$1$5 = $as_Llambda_syntax_Program$Expression$If0(e);
-    var x4 = x$1$5.Llambda_syntax_Program$Expression$If0__f_e1;
-    var x5 = x$1$5.Llambda_syntax_Program$Expression$If0__f_e2;
-    var x6 = x$1$5.Llambda_syntax_Program$Expression$If0__f_e3;
-    return (((((("if (" + this.apply__Llambda_syntax_Program$Expression__T(x4)) + ")==0 then (") + this.apply__Llambda_syntax_Program$Expression__T(x5)) + ") else (") + this.apply__Llambda_syntax_Program$Expression__T(x6)) + ")")
+  if ((e instanceof $c_Llambda_syntax_Program$Term$If0)) {
+    var x$1$5 = $as_Llambda_syntax_Program$Term$If0(e);
+    var x4 = x$1$5.Llambda_syntax_Program$Term$If0__f_e1;
+    var x5 = x$1$5.Llambda_syntax_Program$Term$If0__f_e2;
+    var x6 = x$1$5.Llambda_syntax_Program$Term$If0__f_e3;
+    return (((((("if (" + this.apply__Llambda_syntax_Program$Term__T(x4)) + ")==0 then (") + this.apply__Llambda_syntax_Program$Term__T(x5)) + ") else (") + this.apply__Llambda_syntax_Program$Term__T(x6)) + ")")
   };
   throw new $c_s_MatchError(e)
 });
@@ -15698,7 +15624,8 @@ $c_Lcaos_frontend_widgets_SimulateMermaid.prototype.updateEnabledActions__O__V =
   this.showEnabled__O__V(c)
 });
 $c_Lcaos_frontend_widgets_SimulateMermaid.prototype.showTerminal__O__V = (function(from) {
-  if (($as_Llambda_syntax_Program$Expression(from), false)) {
+  var this$1 = this.Lcaos_frontend_widgets_SimulateMermaid__f_simulate.Lcaos_frontend_widgets_WidgetInfo$Simulate__f_sos;
+  if (this$1.accepting__Llambda_syntax_Program$Term__Z($as_Llambda_syntax_Program$Term(from))) {
     this.Lcaos_frontend_widgets_SimulateMermaid__f_top.append__T__Lcaos_frontend_widgets_DomElem("p").append__T__Lcaos_frontend_widgets_DomElem("span").style__T__Lcaos_frontend_widgets_DomElem("font-weight:bold;").textEl__T__Lcaos_frontend_widgets_DomElem("- Terminal -")
   }
 });
@@ -15711,7 +15638,7 @@ $c_Lcaos_frontend_widgets_SimulateMermaid.prototype.showTrace__V = (function() {
 $c_Lcaos_frontend_widgets_SimulateMermaid.prototype.showEnabled__O__V = (function(from) {
   this.Lcaos_frontend_widgets_SimulateMermaid__f_left.html__T__Lcaos_frontend_widgets_DomElem("");
   var this$1 = this.Lcaos_frontend_widgets_SimulateMermaid__f_simulate.Lcaos_frontend_widgets_WidgetInfo$Simulate__f_sos;
-  var enabled = this$1.next__Llambda_syntax_Program$Expression__sci_Set($as_Llambda_syntax_Program$Expression(from));
+  var enabled = this$1.next__Llambda_syntax_Program$Term__sci_Set($as_Llambda_syntax_Program$Term(from));
   var ul = this.Lcaos_frontend_widgets_SimulateMermaid__f_left.append__T__Lcaos_frontend_widgets_DomElem("ul").style__T__Lcaos_frontend_widgets_DomElem("list-style-type:none;padding:0;margin:0;");
   ul.append__T__Lcaos_frontend_widgets_DomElem("li").append__T__Lcaos_frontend_widgets_DomElem("span").style__T__Lcaos_frontend_widgets_DomElem("font-weight:bold;").textEl__T__Lcaos_frontend_widgets_DomElem("Enabled transitions:");
   enabled.withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((x$1) => {
@@ -15952,14 +15879,15 @@ $c_Lcaos_frontend_widgets_SimulateText.prototype.showTrace__V = (function() {
   $$x1.html__T__Lcaos_frontend_widgets_DomElem((" " + $f_sc_IterableOnceOps__mkString__T__T__T__T(this$3, "", ",", "")))
 });
 $c_Lcaos_frontend_widgets_SimulateText.prototype.showTerminal__O__V = (function(from) {
-  if (($as_Llambda_syntax_Program$Expression(from), false)) {
+  var this$1 = this.Lcaos_frontend_widgets_SimulateText__f_simulate.Lcaos_frontend_widgets_WidgetInfo$Simulate__f_sos;
+  if (this$1.accepting__Llambda_syntax_Program$Term__Z($as_Llambda_syntax_Program$Term(from))) {
     this.Lcaos_frontend_widgets_SimulateText__f_top.append__T__Lcaos_frontend_widgets_DomElem("p").append__T__Lcaos_frontend_widgets_DomElem("span").style__T__Lcaos_frontend_widgets_DomElem("font-weight:bold;").textEl__T__Lcaos_frontend_widgets_DomElem("- Terminal -")
   }
 });
 $c_Lcaos_frontend_widgets_SimulateText.prototype.showEnabled__O__V = (function(from) {
   this.Lcaos_frontend_widgets_SimulateText__f_left.html__T__Lcaos_frontend_widgets_DomElem("");
   var this$1 = this.Lcaos_frontend_widgets_SimulateText__f_simulate.Lcaos_frontend_widgets_WidgetInfo$Simulate__f_sos;
-  var enabled = this$1.next__Llambda_syntax_Program$Expression__sci_Set($as_Llambda_syntax_Program$Expression(from));
+  var enabled = this$1.next__Llambda_syntax_Program$Term__sci_Set($as_Llambda_syntax_Program$Term(from));
   var ul = this.Lcaos_frontend_widgets_SimulateText__f_left.append__T__Lcaos_frontend_widgets_DomElem("ul").style__T__Lcaos_frontend_widgets_DomElem("list-style-type:none;padding:0;margin:0;");
   ul.append__T__Lcaos_frontend_widgets_DomElem("li").append__T__Lcaos_frontend_widgets_DomElem("span").style__T__Lcaos_frontend_widgets_DomElem("font-weight:bold;").textEl__T__Lcaos_frontend_widgets_DomElem("Enabled transitions:");
   enabled.withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((x$1) => {
@@ -18386,6 +18314,208 @@ var $d_ju_regex_Pattern = new $TypeData().initClass({
 });
 $c_ju_regex_Pattern.prototype.$classData = $d_ju_regex_Pattern;
 /** @constructor */
+function $c_Llambda_backend_LazySemantics$() {
+  /*<skip>*/
+}
+$c_Llambda_backend_LazySemantics$.prototype = new $h_O();
+$c_Llambda_backend_LazySemantics$.prototype.constructor = $c_Llambda_backend_LazySemantics$;
+/** @constructor */
+function $h_Llambda_backend_LazySemantics$() {
+  /*<skip>*/
+}
+$h_Llambda_backend_LazySemantics$.prototype = $c_Llambda_backend_LazySemantics$.prototype;
+$c_Llambda_backend_LazySemantics$.prototype.accepting__Llambda_syntax_Program$Term__Z = (function(s) {
+  return false
+});
+$c_Llambda_backend_LazySemantics$.prototype.next__Llambda_syntax_Program$Term__sci_Set = (function(st) {
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Var)) {
+    var x$1 = $as_Llambda_syntax_Program$Term$Var(st);
+    var this$2 = $m_s_Predef$().s_Predef$__f_Set;
+    var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
+    return this$2.from__sc_IterableOnce__sci_Set(elems)
+  };
+  if ((st instanceof $c_Llambda_syntax_Program$Term$App)) {
+    var x$1$1 = $as_Llambda_syntax_Program$Term$App(st);
+    var x74 = x$1$1.Llambda_syntax_Program$Term$App__f_e1;
+    var x75 = x$1$1.Llambda_syntax_Program$Term$App__f_e2;
+    if ((x74 instanceof $c_Llambda_syntax_Program$Term$Lam)) {
+      var x$1$2 = $as_Llambda_syntax_Program$Term$Lam(x74);
+      var x78 = x$1$2.Llambda_syntax_Program$Term$Lam__f_x;
+      var x79 = x$1$2.Llambda_syntax_Program$Term$Lam__f_e;
+      var this$7 = $m_s_Predef$().s_Predef$__f_Set;
+      var $$x1 = $m_sr_ScalaRunTime$();
+      var self = ("beta-" + x78);
+      var y = $m_Llambda_backend_Semantics$().subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x79, x78, x75);
+      var elems$1 = $$x1.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self, y)]));
+      return this$7.from__sc_IterableOnce__sci_Set(elems$1)
+    };
+    var e1N = this.next__Llambda_syntax_Program$Term__sci_Set(x74);
+    if ((!e1N.isEmpty__Z())) {
+      var this$11 = $m_s_Predef$().s_Predef$__f_Set;
+      var $$x2 = $m_sr_ScalaRunTime$();
+      var self$1 = $as_T2(e1N.head__O())._1__O();
+      var ev$2 = $as_T(self$1);
+      var e1 = $as_Llambda_syntax_Program$Term($as_T2(e1N.head__O())._2__O());
+      var y$1 = new $c_Llambda_syntax_Program$Term$App(e1, x75);
+      var elems$2 = $$x2.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(ev$2, y$1)]));
+      return this$11.from__sc_IterableOnce__sci_Set(elems$2)
+    } else {
+      return $as_sci_Set(this.next__Llambda_syntax_Program$Term__sci_Set(x75).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$12) => ((x$1$3) => {
+        var x$1$4 = $as_T2(x$1$3);
+        return ((x$1$4 !== null) && ($as_T(x$1$4._1__O()), $as_Llambda_syntax_Program$Term(x$1$4._2__O()), true))
+      }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$1, e1$3) => ((x$1$2$1) => {
+        var x$1$5 = $as_T2(x$1$2$1);
+        if ((x$1$5 !== null)) {
+          var by$1 = $as_T(x$1$5._1__O());
+          var to$1 = $as_Llambda_syntax_Program$Term(x$1$5._2__O());
+          var y$2 = new $c_Llambda_syntax_Program$Term$App(e1$3, to$1);
+          return new $c_T2(by$1, y$2)
+        };
+        throw new $c_s_MatchError(x$1$5)
+      }))(this, x74))))
+    }
+  };
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Lam)) {
+    var x$1$6 = $as_Llambda_syntax_Program$Term$Lam(st);
+    var x66 = x$1$6.Llambda_syntax_Program$Term$Lam__f_x;
+    var x67 = x$1$6.Llambda_syntax_Program$Term$Lam__f_e;
+    return $as_sci_Set(this.next__Llambda_syntax_Program$Term__sci_Set(x67).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$3$1) => ((x$1$3$1) => {
+      var x$1$7 = $as_T2(x$1$3$1);
+      return ((x$1$7 !== null) && ($as_T(x$1$7._1__O()), $as_Llambda_syntax_Program$Term(x$1$7._2__O()), true))
+    }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$4$1, x$3) => ((x$1$4$1) => {
+      var x$1$2$2 = $as_T2(x$1$4$1);
+      if ((x$1$2$2 !== null)) {
+        var by$3 = $as_T(x$1$2$2._1__O());
+        var to$3 = $as_Llambda_syntax_Program$Term(x$1$2$2._2__O());
+        var y$3 = new $c_Llambda_syntax_Program$Term$Lam(x$3, to$3);
+        return new $c_T2(by$3, y$3)
+      };
+      throw new $c_s_MatchError(x$1$2$2)
+    }))(this, x66))))
+  };
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Val)) {
+    var x$1$8 = $as_Llambda_syntax_Program$Term$Val(st);
+    var this$21 = $m_s_Predef$().s_Predef$__f_Set;
+    var elems$3 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
+    return this$21.from__sc_IterableOnce__sci_Set(elems$3)
+  };
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Add)) {
+    var x$1$9 = $as_Llambda_syntax_Program$Term$Add(st);
+    var x53 = x$1$9.Llambda_syntax_Program$Term$Add__f_e1;
+    var x54 = x$1$9.Llambda_syntax_Program$Term$Add__f_e2;
+    if ((x53 instanceof $c_Llambda_syntax_Program$Term$Val)) {
+      var x$1$10 = $as_Llambda_syntax_Program$Term$Val(x53);
+      var x60 = x$1$10.Llambda_syntax_Program$Term$Val__f_n;
+      if ((x54 instanceof $c_Llambda_syntax_Program$Term$Val)) {
+        var x$1$11 = $as_Llambda_syntax_Program$Term$Val(x54);
+        var x57 = x$1$11.Llambda_syntax_Program$Term$Val__f_n;
+        var this$28 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x3 = $m_sr_ScalaRunTime$();
+        var n = ((x60 + x57) | 0);
+        var y$4 = new $c_Llambda_syntax_Program$Term$Val(n);
+        var elems$4 = $$x3.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("+", y$4)]));
+        return this$28.from__sc_IterableOnce__sci_Set(elems$4)
+      }
+    };
+    var e1N$2 = this.next__Llambda_syntax_Program$Term__sci_Set(x53);
+    if ((!e1N$2.isEmpty__Z())) {
+      var this$32 = $m_s_Predef$().s_Predef$__f_Set;
+      var $$x4 = $m_sr_ScalaRunTime$();
+      var self$2 = $as_T2(e1N$2.head__O())._1__O();
+      var ev$6 = $as_T(self$2);
+      var e1$1 = $as_Llambda_syntax_Program$Term($as_T2(e1N$2.head__O())._2__O());
+      var y$5 = new $c_Llambda_syntax_Program$Term$Add(e1$1, x54);
+      var elems$5 = $$x4.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(ev$6, y$5)]));
+      return this$32.from__sc_IterableOnce__sci_Set(elems$5)
+    } else {
+      return $as_sci_Set(this.next__Llambda_syntax_Program$Term__sci_Set(x54).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$5$1) => ((x$1$5$1) => {
+        var x$1$12 = $as_T2(x$1$5$1);
+        return ((x$1$12 !== null) && ($as_T(x$1$12._1__O()), $as_Llambda_syntax_Program$Term(x$1$12._2__O()), true))
+      }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$6$1, e1$5) => ((x$1$6$1) => {
+        var x$1$13 = $as_T2(x$1$6$1);
+        if ((x$1$13 !== null)) {
+          var by$5 = $as_T(x$1$13._1__O());
+          var to$5 = $as_Llambda_syntax_Program$Term(x$1$13._2__O());
+          var y$6 = new $c_Llambda_syntax_Program$Term$Add(e1$5, to$5);
+          return new $c_T2(by$5, y$6)
+        };
+        throw new $c_s_MatchError(x$1$13)
+      }))(this, x53))))
+    }
+  };
+  if ((st instanceof $c_Llambda_syntax_Program$Term$If0)) {
+    var x$1$14 = $as_Llambda_syntax_Program$Term$If0(st);
+    var x41 = x$1$14.Llambda_syntax_Program$Term$If0__f_e1;
+    var x42 = x$1$14.Llambda_syntax_Program$Term$If0__f_e2;
+    var x43 = x$1$14.Llambda_syntax_Program$Term$If0__f_e3;
+    if ((x41 instanceof $c_Llambda_syntax_Program$Term$Val)) {
+      var x$1$15 = $as_Llambda_syntax_Program$Term$Val(x41);
+      var x46 = x$1$15.Llambda_syntax_Program$Term$Val__f_n;
+      if ((x46 === 0)) {
+        var this$40 = $m_s_Predef$().s_Predef$__f_Set;
+        var elems$6 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if0-true", x42)]));
+        return this$40.from__sc_IterableOnce__sci_Set(elems$6)
+      };
+      var this$43 = $m_s_Predef$().s_Predef$__f_Set;
+      var elems$7 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if0-false", x43)]));
+      return this$43.from__sc_IterableOnce__sci_Set(elems$7)
+    };
+    var e1N$3 = this.next__Llambda_syntax_Program$Term__sci_Set(x41);
+    if ((!e1N$3.isEmpty__Z())) {
+      var this$47 = $m_s_Predef$().s_Predef$__f_Set;
+      var $$x5 = $m_sr_ScalaRunTime$();
+      var self$3 = $as_T2(e1N$3.head__O())._1__O();
+      var ev$10 = $as_T(self$3);
+      var e1$2 = $as_Llambda_syntax_Program$Term($as_T2(e1N$3.head__O())._2__O());
+      var y$7 = new $c_Llambda_syntax_Program$Term$If0(e1$2, x42, x43);
+      var elems$8 = $$x5.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(ev$10, y$7)]));
+      return this$47.from__sc_IterableOnce__sci_Set(elems$8)
+    } else {
+      var e2N = this.next__Llambda_syntax_Program$Term__sci_Set(x42);
+      if ((!e2N.isEmpty__Z())) {
+        var this$51 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x6 = $m_sr_ScalaRunTime$();
+        var self$4 = $as_T2(e2N.head__O())._1__O();
+        var ev$11 = $as_T(self$4);
+        var e2 = $as_Llambda_syntax_Program$Term($as_T2(e2N.head__O())._2__O());
+        var y$8 = new $c_Llambda_syntax_Program$Term$If0(x41, e2, x42);
+        var elems$9 = $$x6.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(ev$11, y$8)]));
+        return this$51.from__sc_IterableOnce__sci_Set(elems$9)
+      } else {
+        return $as_sci_Set(this.next__Llambda_syntax_Program$Term__sci_Set(x43).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$7$1) => ((x$1$7$1) => {
+          var x$1$16 = $as_T2(x$1$7$1);
+          return ((x$1$16 !== null) && ($as_T(x$1$16._1__O()), $as_Llambda_syntax_Program$Term(x$1$16._2__O()), true))
+        }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$8$1, e1$7, e2$6) => ((x$1$8$1) => {
+          var x$1$17 = $as_T2(x$1$8$1);
+          if ((x$1$17 !== null)) {
+            var by$7 = $as_T(x$1$17._1__O());
+            var to$7 = $as_Llambda_syntax_Program$Term(x$1$17._2__O());
+            var y$9 = new $c_Llambda_syntax_Program$Term$If0(e1$7, e2$6, to$7);
+            return new $c_T2(by$7, y$9)
+          };
+          throw new $c_s_MatchError(x$1$17)
+        }))(this, x41, x42))))
+      }
+    }
+  };
+  throw new $c_s_MatchError(st)
+});
+var $d_Llambda_backend_LazySemantics$ = new $TypeData().initClass({
+  Llambda_backend_LazySemantics$: 0
+}, false, "lambda.backend.LazySemantics$", {
+  Llambda_backend_LazySemantics$: 1,
+  O: 1,
+  Lcaos_sos_SOS: 1
+});
+$c_Llambda_backend_LazySemantics$.prototype.$classData = $d_Llambda_backend_LazySemantics$;
+var $n_Llambda_backend_LazySemantics$;
+function $m_Llambda_backend_LazySemantics$() {
+  if ((!$n_Llambda_backend_LazySemantics$)) {
+    $n_Llambda_backend_LazySemantics$ = new $c_Llambda_backend_LazySemantics$()
+  };
+  return $n_Llambda_backend_LazySemantics$
+}
+/** @constructor */
 function $c_Llambda_backend_Semantics$() {
   /*<skip>*/
 }
@@ -18396,52 +18526,55 @@ function $h_Llambda_backend_Semantics$() {
   /*<skip>*/
 }
 $h_Llambda_backend_Semantics$.prototype = $c_Llambda_backend_Semantics$.prototype;
-$c_Llambda_backend_Semantics$.prototype.next__Llambda_syntax_Program$Expression__sci_Set = (function(st) {
-  if ((st instanceof $c_Llambda_syntax_Program$Expression$Var)) {
-    var x$1 = $as_Llambda_syntax_Program$Expression$Var(st);
+$c_Llambda_backend_Semantics$.prototype.accepting__Llambda_syntax_Program$Term__Z = (function(s) {
+  return false
+});
+$c_Llambda_backend_Semantics$.prototype.next__Llambda_syntax_Program$Term__sci_Set = (function(st) {
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Var)) {
+    var x$1 = $as_Llambda_syntax_Program$Term$Var(st);
     var this$2 = $m_s_Predef$().s_Predef$__f_Set;
     var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
     return this$2.from__sc_IterableOnce__sci_Set(elems)
   };
-  if ((st instanceof $c_Llambda_syntax_Program$Expression$App)) {
-    var x$1$1 = $as_Llambda_syntax_Program$Expression$App(st);
-    var x89 = x$1$1.Llambda_syntax_Program$Expression$App__f_e1;
-    var x90 = x$1$1.Llambda_syntax_Program$Expression$App__f_e2;
-    var this$11 = $as_sc_SetOps(this.next__Llambda_syntax_Program$Expression__sci_Set(x89).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$4) => ((x$1$2) => {
+  if ((st instanceof $c_Llambda_syntax_Program$Term$App)) {
+    var x$1$1 = $as_Llambda_syntax_Program$Term$App(st);
+    var x89 = x$1$1.Llambda_syntax_Program$Term$App__f_e1;
+    var x90 = x$1$1.Llambda_syntax_Program$Term$App__f_e2;
+    var this$11 = $as_sc_SetOps(this.next__Llambda_syntax_Program$Term__sci_Set(x89).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$4) => ((x$1$2) => {
       var x$1$3 = $as_T2(x$1$2);
-      return ((x$1$3 !== null) && ($as_T(x$1$3._1__O()), $as_Llambda_syntax_Program$Expression(x$1$3._2__O()), true))
+      return ((x$1$3 !== null) && ($as_T(x$1$3._1__O()), $as_Llambda_syntax_Program$Term(x$1$3._2__O()), true))
     }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$1, e2$2) => ((x$1$2$1) => {
       var x$1$4 = $as_T2(x$1$2$1);
       if ((x$1$4 !== null)) {
         var by$1 = $as_T(x$1$4._1__O());
-        var to$1 = $as_Llambda_syntax_Program$Expression(x$1$4._2__O());
-        var y = new $c_Llambda_syntax_Program$Expression$App(to$1, e2$2);
+        var to$1 = $as_Llambda_syntax_Program$Term(x$1$4._2__O());
+        var y = new $c_Llambda_syntax_Program$Term$App(to$1, e2$2);
         return new $c_T2(by$1, y)
       };
       throw new $c_s_MatchError(x$1$4)
     }))(this, x90))));
-    var that = $as_sc_IterableOnce(this.next__Llambda_syntax_Program$Expression__sci_Set(x90).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$3$1) => ((x$1$3$1) => {
+    var that = $as_sc_IterableOnce(this.next__Llambda_syntax_Program$Term__sci_Set(x90).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$3$1) => ((x$1$3$1) => {
       var x$1$5 = $as_T2(x$1$3$1);
-      return ((x$1$5 !== null) && ($as_T(x$1$5._1__O()), $as_Llambda_syntax_Program$Expression(x$1$5._2__O()), true))
+      return ((x$1$5 !== null) && ($as_T(x$1$5._1__O()), $as_Llambda_syntax_Program$Term(x$1$5._2__O()), true))
     }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$4$1, e1$2) => ((x$1$4$1) => {
       var x$1$6 = $as_T2(x$1$4$1);
       if ((x$1$6 !== null)) {
         var by$3 = $as_T(x$1$6._1__O());
-        var to$3 = $as_Llambda_syntax_Program$Expression(x$1$6._2__O());
-        var y$1 = new $c_Llambda_syntax_Program$Expression$App(e1$2, to$3);
+        var to$3 = $as_Llambda_syntax_Program$Term(x$1$6._2__O());
+        var y$1 = new $c_Llambda_syntax_Program$Term$App(e1$2, to$3);
         return new $c_T2(by$3, y$1)
       };
       throw new $c_s_MatchError(x$1$6)
     }))(this, x89))));
     var this$17 = this$11.concat__sc_IterableOnce__sc_SetOps(that);
-    if ((x89 instanceof $c_Llambda_syntax_Program$Expression$Lam)) {
-      var x$1$7 = $as_Llambda_syntax_Program$Expression$Lam(x89);
-      var x16 = x$1$7.Llambda_syntax_Program$Expression$Lam__f_x;
-      var x17 = x$1$7.Llambda_syntax_Program$Expression$Lam__f_e;
+    if ((x89 instanceof $c_Llambda_syntax_Program$Term$Lam)) {
+      var x$1$7 = $as_Llambda_syntax_Program$Term$Lam(x89);
+      var x16 = x$1$7.Llambda_syntax_Program$Term$Lam__f_x;
+      var x17 = x$1$7.Llambda_syntax_Program$Term$Lam__f_e;
       var this$15 = $m_s_Predef$().s_Predef$__f_Set;
       var $$x1 = $m_sr_ScalaRunTime$();
       var self = ("beta-" + x16);
-      var y$2 = $m_Llambda_backend_Semantics$package$().subst__Llambda_syntax_Program$Expression__T__Llambda_syntax_Program$Expression__Llambda_syntax_Program$Expression(x17, x16, x90);
+      var y$2 = this.subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x17, x16, x90);
       var elems$1 = $$x1.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self, y$2)]));
       var that$1 = this$15.from__sc_IterableOnce__sci_Set(elems$1)
     } else {
@@ -18451,56 +18584,56 @@ $c_Llambda_backend_Semantics$.prototype.next__Llambda_syntax_Program$Expression_
     };
     return $as_sci_Set(this$17.concat__sc_IterableOnce__sc_SetOps(that$1))
   };
-  if ((st instanceof $c_Llambda_syntax_Program$Expression$Lam)) {
-    var x$1$8 = $as_Llambda_syntax_Program$Expression$Lam(st);
-    var x85 = x$1$8.Llambda_syntax_Program$Expression$Lam__f_x;
-    var x86 = x$1$8.Llambda_syntax_Program$Expression$Lam__f_e;
-    return $as_sci_Set(this.next__Llambda_syntax_Program$Expression__sci_Set(x86).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$5$1) => ((x$1$5$1) => {
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Lam)) {
+    var x$1$8 = $as_Llambda_syntax_Program$Term$Lam(st);
+    var x85 = x$1$8.Llambda_syntax_Program$Term$Lam__f_x;
+    var x86 = x$1$8.Llambda_syntax_Program$Term$Lam__f_e;
+    return $as_sci_Set(this.next__Llambda_syntax_Program$Term__sci_Set(x86).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$5$1) => ((x$1$5$1) => {
       var x$1$9 = $as_T2(x$1$5$1);
-      return ((x$1$9 !== null) && ($as_T(x$1$9._1__O()), $as_Llambda_syntax_Program$Expression(x$1$9._2__O()), true))
+      return ((x$1$9 !== null) && ($as_T(x$1$9._1__O()), $as_Llambda_syntax_Program$Term(x$1$9._2__O()), true))
     }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$6$1, x$4) => ((x$1$6$1) => {
       var x$1$2$2 = $as_T2(x$1$6$1);
       if ((x$1$2$2 !== null)) {
         var by$5 = $as_T(x$1$2$2._1__O());
-        var to$5 = $as_Llambda_syntax_Program$Expression(x$1$2$2._2__O());
-        var y$3 = new $c_Llambda_syntax_Program$Expression$Lam(x$4, to$5);
+        var to$5 = $as_Llambda_syntax_Program$Term(x$1$2$2._2__O());
+        var y$3 = new $c_Llambda_syntax_Program$Term$Lam(x$4, to$5);
         return new $c_T2(by$5, y$3)
       };
       throw new $c_s_MatchError(x$1$2$2)
     }))(this, x85))))
   };
-  if ((st instanceof $c_Llambda_syntax_Program$Expression$Val)) {
-    var x$1$10 = $as_Llambda_syntax_Program$Expression$Val(st);
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Val)) {
+    var x$1$10 = $as_Llambda_syntax_Program$Term$Val(st);
     var this$23 = $m_s_Predef$().s_Predef$__f_Set;
     var elems$3 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
     return this$23.from__sc_IterableOnce__sci_Set(elems$3)
   };
-  if ((st instanceof $c_Llambda_syntax_Program$Expression$Add)) {
-    var x$1$11 = $as_Llambda_syntax_Program$Expression$Add(st);
-    var x78 = x$1$11.Llambda_syntax_Program$Expression$Add__f_e1;
-    var x79 = x$1$11.Llambda_syntax_Program$Expression$Add__f_e2;
-    var this$31 = $as_sc_SetOps(this.next__Llambda_syntax_Program$Expression__sci_Set(x78).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$7$1) => ((x$1$7$1) => {
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Add)) {
+    var x$1$11 = $as_Llambda_syntax_Program$Term$Add(st);
+    var x78 = x$1$11.Llambda_syntax_Program$Term$Add__f_e1;
+    var x79 = x$1$11.Llambda_syntax_Program$Term$Add__f_e2;
+    var this$31 = $as_sc_SetOps(this.next__Llambda_syntax_Program$Term__sci_Set(x78).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$7$1) => ((x$1$7$1) => {
       var x$1$12 = $as_T2(x$1$7$1);
-      return ((x$1$12 !== null) && ($as_T(x$1$12._1__O()), $as_Llambda_syntax_Program$Expression(x$1$12._2__O()), true))
+      return ((x$1$12 !== null) && ($as_T(x$1$12._1__O()), $as_Llambda_syntax_Program$Term(x$1$12._2__O()), true))
     }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$8$1, e2$4) => ((x$1$8$1) => {
       var x$1$13 = $as_T2(x$1$8$1);
       if ((x$1$13 !== null)) {
         var by$7 = $as_T(x$1$13._1__O());
-        var to$7 = $as_Llambda_syntax_Program$Expression(x$1$13._2__O());
-        var y$4 = new $c_Llambda_syntax_Program$Expression$Add(to$7, e2$4);
+        var to$7 = $as_Llambda_syntax_Program$Term(x$1$13._2__O());
+        var y$4 = new $c_Llambda_syntax_Program$Term$Add(to$7, e2$4);
         return new $c_T2(by$7, y$4)
       };
       throw new $c_s_MatchError(x$1$13)
     }))(this, x79))));
-    var that$2 = $as_sc_IterableOnce(this.next__Llambda_syntax_Program$Expression__sci_Set(x79).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$9$1) => ((x$1$9$1) => {
+    var that$2 = $as_sc_IterableOnce(this.next__Llambda_syntax_Program$Term__sci_Set(x79).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$9$1) => ((x$1$9$1) => {
       var x$1$14 = $as_T2(x$1$9$1);
-      return ((x$1$14 !== null) && ($as_T(x$1$14._1__O()), $as_Llambda_syntax_Program$Expression(x$1$14._2__O()), true))
+      return ((x$1$14 !== null) && ($as_T(x$1$14._1__O()), $as_Llambda_syntax_Program$Term(x$1$14._2__O()), true))
     }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$10$1, e1$4) => ((x$1$10$1) => {
       var x$1$15 = $as_T2(x$1$10$1);
       if ((x$1$15 !== null)) {
         var by$9 = $as_T(x$1$15._1__O());
-        var to$9 = $as_Llambda_syntax_Program$Expression(x$1$15._2__O());
-        var y$5 = new $c_Llambda_syntax_Program$Expression$Add(e1$4, to$9);
+        var to$9 = $as_Llambda_syntax_Program$Term(x$1$15._2__O());
+        var y$5 = new $c_Llambda_syntax_Program$Term$Add(e1$4, to$9);
         return new $c_T2(by$9, y$5)
       };
       throw new $c_s_MatchError(x$1$15)
@@ -18508,16 +18641,16 @@ $c_Llambda_backend_Semantics$.prototype.next__Llambda_syntax_Program$Expression_
     var this$40 = this$31.concat__sc_IterableOnce__sc_SetOps(that$2);
     matchResult12: {
       var that$3;
-      if ((x78 instanceof $c_Llambda_syntax_Program$Expression$Val)) {
-        var x$1$16 = $as_Llambda_syntax_Program$Expression$Val(x78);
-        var x44 = x$1$16.Llambda_syntax_Program$Expression$Val__f_n;
-        if ((x79 instanceof $c_Llambda_syntax_Program$Expression$Val)) {
-          var x$1$17 = $as_Llambda_syntax_Program$Expression$Val(x79);
-          var x41 = x$1$17.Llambda_syntax_Program$Expression$Val__f_n;
+      if ((x78 instanceof $c_Llambda_syntax_Program$Term$Val)) {
+        var x$1$16 = $as_Llambda_syntax_Program$Term$Val(x78);
+        var x44 = x$1$16.Llambda_syntax_Program$Term$Val__f_n;
+        if ((x79 instanceof $c_Llambda_syntax_Program$Term$Val)) {
+          var x$1$17 = $as_Llambda_syntax_Program$Term$Val(x79);
+          var x41 = x$1$17.Llambda_syntax_Program$Term$Val__f_n;
           var this$38 = $m_s_Predef$().s_Predef$__f_Set;
           var $$x2 = $m_sr_ScalaRunTime$();
           var n = ((x44 + x41) | 0);
-          var y$6 = new $c_Llambda_syntax_Program$Expression$Val(n);
+          var y$6 = new $c_Llambda_syntax_Program$Term$Val(n);
           var elems$4 = $$x2.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("+", y$6)]));
           var that$3 = this$38.from__sc_IterableOnce__sci_Set(elems$4);
           break matchResult12
@@ -18529,47 +18662,47 @@ $c_Llambda_backend_Semantics$.prototype.next__Llambda_syntax_Program$Expression_
     };
     return $as_sci_Set(this$40.concat__sc_IterableOnce__sc_SetOps(that$3))
   };
-  if ((st instanceof $c_Llambda_syntax_Program$Expression$If0)) {
-    var x$1$18 = $as_Llambda_syntax_Program$Expression$If0(st);
-    var x73 = x$1$18.Llambda_syntax_Program$Expression$If0__f_e1;
-    var x74 = x$1$18.Llambda_syntax_Program$Expression$If0__f_e2;
-    var x75 = x$1$18.Llambda_syntax_Program$Expression$If0__f_e3;
-    var this$48 = $as_sc_SetOps(this.next__Llambda_syntax_Program$Expression__sci_Set(x73).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$11$1) => ((x$1$11$1) => {
+  if ((st instanceof $c_Llambda_syntax_Program$Term$If0)) {
+    var x$1$18 = $as_Llambda_syntax_Program$Term$If0(st);
+    var x73 = x$1$18.Llambda_syntax_Program$Term$If0__f_e1;
+    var x74 = x$1$18.Llambda_syntax_Program$Term$If0__f_e2;
+    var x75 = x$1$18.Llambda_syntax_Program$Term$If0__f_e3;
+    var this$48 = $as_sc_SetOps(this.next__Llambda_syntax_Program$Term__sci_Set(x73).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$11$1) => ((x$1$11$1) => {
       var x$1$19 = $as_T2(x$1$11$1);
-      return ((x$1$19 !== null) && ($as_T(x$1$19._1__O()), $as_Llambda_syntax_Program$Expression(x$1$19._2__O()), true))
+      return ((x$1$19 !== null) && ($as_T(x$1$19._1__O()), $as_Llambda_syntax_Program$Term(x$1$19._2__O()), true))
     }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$12$1, e2$6, e3$2) => ((x$1$12$1) => {
       var x$1$20 = $as_T2(x$1$12$1);
       if ((x$1$20 !== null)) {
         var by$11 = $as_T(x$1$20._1__O());
-        var to$11 = $as_Llambda_syntax_Program$Expression(x$1$20._2__O());
-        var y$7 = new $c_Llambda_syntax_Program$Expression$If0(to$11, e2$6, e3$2);
+        var to$11 = $as_Llambda_syntax_Program$Term(x$1$20._2__O());
+        var y$7 = new $c_Llambda_syntax_Program$Term$If0(to$11, e2$6, e3$2);
         return new $c_T2(by$11, y$7)
       };
       throw new $c_s_MatchError(x$1$20)
     }))(this, x74, x75))));
-    var that$4 = $as_sc_IterableOnce(this.next__Llambda_syntax_Program$Expression__sci_Set(x74).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$13$1) => ((x$1$13$1) => {
+    var that$4 = $as_sc_IterableOnce(this.next__Llambda_syntax_Program$Term__sci_Set(x74).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$13$1) => ((x$1$13$1) => {
       var x$1$21 = $as_T2(x$1$13$1);
-      return ((x$1$21 !== null) && ($as_T(x$1$21._1__O()), $as_Llambda_syntax_Program$Expression(x$1$21._2__O()), true))
+      return ((x$1$21 !== null) && ($as_T(x$1$21._1__O()), $as_Llambda_syntax_Program$Term(x$1$21._2__O()), true))
     }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$14$1, e1$6, e3$3) => ((x$1$14$1) => {
       var x$1$22 = $as_T2(x$1$14$1);
       if ((x$1$22 !== null)) {
         var by$13 = $as_T(x$1$22._1__O());
-        var to$13 = $as_Llambda_syntax_Program$Expression(x$1$22._2__O());
-        var y$8 = new $c_Llambda_syntax_Program$Expression$If0(e1$6, to$13, e3$3);
+        var to$13 = $as_Llambda_syntax_Program$Term(x$1$22._2__O());
+        var y$8 = new $c_Llambda_syntax_Program$Term$If0(e1$6, to$13, e3$3);
         return new $c_T2(by$13, y$8)
       };
       throw new $c_s_MatchError(x$1$22)
     }))(this, x73, x75))));
     var this$52 = this$48.concat__sc_IterableOnce__sc_SetOps(that$4);
-    var that$5 = $as_sc_IterableOnce(this.next__Llambda_syntax_Program$Expression__sci_Set(x75).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$15$1) => ((x$1$15$1) => {
+    var that$5 = $as_sc_IterableOnce(this.next__Llambda_syntax_Program$Term__sci_Set(x75).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$15$1) => ((x$1$15$1) => {
       var x$1$23 = $as_T2(x$1$15$1);
-      return ((x$1$23 !== null) && ($as_T(x$1$23._1__O()), $as_Llambda_syntax_Program$Expression(x$1$23._2__O()), true))
+      return ((x$1$23 !== null) && ($as_T(x$1$23._1__O()), $as_Llambda_syntax_Program$Term(x$1$23._2__O()), true))
     }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$16$1, e1$7, e2$7) => ((x$1$16$1) => {
       var x$1$24 = $as_T2(x$1$16$1);
       if ((x$1$24 !== null)) {
         var by$15 = $as_T(x$1$24._1__O());
-        var to$15 = $as_Llambda_syntax_Program$Expression(x$1$24._2__O());
-        var y$9 = new $c_Llambda_syntax_Program$Expression$If0(e1$7, e2$7, to$15);
+        var to$15 = $as_Llambda_syntax_Program$Term(x$1$24._2__O());
+        var y$9 = new $c_Llambda_syntax_Program$Term$If0(e1$7, e2$7, to$15);
         return new $c_T2(by$15, y$9)
       };
       throw new $c_s_MatchError(x$1$24)
@@ -18577,9 +18710,9 @@ $c_Llambda_backend_Semantics$.prototype.next__Llambda_syntax_Program$Expression_
     var this$61 = this$52.concat__sc_IterableOnce__sc_SetOps(that$5);
     matchResult19: {
       var that$6;
-      if ((x73 instanceof $c_Llambda_syntax_Program$Expression$Val)) {
-        var x$1$25 = $as_Llambda_syntax_Program$Expression$Val(x73);
-        var x69 = x$1$25.Llambda_syntax_Program$Expression$Val__f_n;
+      if ((x73 instanceof $c_Llambda_syntax_Program$Term$Val)) {
+        var x$1$25 = $as_Llambda_syntax_Program$Term$Val(x73);
+        var x69 = x$1$25.Llambda_syntax_Program$Term$Val__f_n;
         if ((x69 === 0)) {
           var this$56 = $m_s_Predef$().s_Predef$__f_Set;
           var elems$6 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if0-true", x74)]));
@@ -18599,6 +18732,55 @@ $c_Llambda_backend_Semantics$.prototype.next__Llambda_syntax_Program$Expression_
   };
   throw new $c_s_MatchError(st)
 });
+$c_Llambda_backend_Semantics$.prototype.subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term = (function(e, x, by) {
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Var)) {
+    var x$1 = $as_Llambda_syntax_Program$Term$Var(e);
+    var x117 = x$1.Llambda_syntax_Program$Term$Var__f_x;
+    return ((x === x117) ? by : e)
+  };
+  if ((e instanceof $c_Llambda_syntax_Program$Term$App)) {
+    var x$1$1 = $as_Llambda_syntax_Program$Term$App(e);
+    var x113 = x$1$1.Llambda_syntax_Program$Term$App__f_e1;
+    var x114 = x$1$1.Llambda_syntax_Program$Term$App__f_e2;
+    var e1 = this.subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x113, x, by);
+    var e2 = this.subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x114, x, by);
+    return new $c_Llambda_syntax_Program$Term$App(e1, e2)
+  };
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Lam)) {
+    var x$1$2 = $as_Llambda_syntax_Program$Term$Lam(e);
+    var x109 = x$1$2.Llambda_syntax_Program$Term$Lam__f_x;
+    var x110 = x$1$2.Llambda_syntax_Program$Term$Lam__f_e;
+    if ((x === x109)) {
+      return e
+    } else {
+      var e$1 = this.subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x110, x, by);
+      return new $c_Llambda_syntax_Program$Term$Lam(x109, e$1)
+    }
+  };
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Val)) {
+    var x$1$3 = $as_Llambda_syntax_Program$Term$Val(e);
+    return e
+  };
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Add)) {
+    var x$1$4 = $as_Llambda_syntax_Program$Term$Add(e);
+    var x102 = x$1$4.Llambda_syntax_Program$Term$Add__f_e1;
+    var x103 = x$1$4.Llambda_syntax_Program$Term$Add__f_e2;
+    var e1$1 = this.subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x102, x, by);
+    var e2$1 = this.subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x103, x, by);
+    return new $c_Llambda_syntax_Program$Term$Add(e1$1, e2$1)
+  };
+  if ((e instanceof $c_Llambda_syntax_Program$Term$If0)) {
+    var x$1$5 = $as_Llambda_syntax_Program$Term$If0(e);
+    var x97 = x$1$5.Llambda_syntax_Program$Term$If0__f_e1;
+    var x98 = x$1$5.Llambda_syntax_Program$Term$If0__f_e2;
+    var x99 = x$1$5.Llambda_syntax_Program$Term$If0__f_e3;
+    var e1$2 = this.subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x97, x, by);
+    var e2$2 = this.subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x98, x, by);
+    var e3 = this.subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x99, x, by);
+    return new $c_Llambda_syntax_Program$Term$If0(e1$2, e2$2, e3)
+  };
+  throw new $c_s_MatchError(e)
+});
 var $d_Llambda_backend_Semantics$ = new $TypeData().initClass({
   Llambda_backend_Semantics$: 0
 }, false, "lambda.backend.Semantics$", {
@@ -18615,6 +18797,211 @@ function $m_Llambda_backend_Semantics$() {
   return $n_Llambda_backend_Semantics$
 }
 /** @constructor */
+function $c_Llambda_backend_StrictSemantics$() {
+  /*<skip>*/
+}
+$c_Llambda_backend_StrictSemantics$.prototype = new $h_O();
+$c_Llambda_backend_StrictSemantics$.prototype.constructor = $c_Llambda_backend_StrictSemantics$;
+/** @constructor */
+function $h_Llambda_backend_StrictSemantics$() {
+  /*<skip>*/
+}
+$h_Llambda_backend_StrictSemantics$.prototype = $c_Llambda_backend_StrictSemantics$.prototype;
+$c_Llambda_backend_StrictSemantics$.prototype.accepting__Llambda_syntax_Program$Term__Z = (function(s) {
+  return false
+});
+$c_Llambda_backend_StrictSemantics$.prototype.next__Llambda_syntax_Program$Term__sci_Set = (function(st) {
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Var)) {
+    var x$1 = $as_Llambda_syntax_Program$Term$Var(st);
+    var this$2 = $m_s_Predef$().s_Predef$__f_Set;
+    var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
+    return this$2.from__sc_IterableOnce__sci_Set(elems)
+  };
+  if ((st instanceof $c_Llambda_syntax_Program$Term$App)) {
+    var x$1$1 = $as_Llambda_syntax_Program$Term$App(st);
+    var x54 = x$1$1.Llambda_syntax_Program$Term$App__f_e1;
+    var x55 = x$1$1.Llambda_syntax_Program$Term$App__f_e2;
+    var e2N = this.next__Llambda_syntax_Program$Term__sci_Set(x55);
+    if ((!e2N.isEmpty__Z())) {
+      var this$7 = $m_s_Predef$().s_Predef$__f_Set;
+      var $$x1 = $m_sr_ScalaRunTime$();
+      var self = $as_T2(e2N.head__O())._1__O();
+      var ev$1 = $as_T(self);
+      var e2 = $as_Llambda_syntax_Program$Term($as_T2(e2N.head__O())._2__O());
+      var y = new $c_Llambda_syntax_Program$Term$App(x54, e2);
+      var elems$1 = $$x1.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(ev$1, y)]));
+      return this$7.from__sc_IterableOnce__sci_Set(elems$1)
+    } else {
+      var e1N = this.next__Llambda_syntax_Program$Term__sci_Set(x54);
+      if ((!e1N.isEmpty__Z())) {
+        var this$11 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x2 = $m_sr_ScalaRunTime$();
+        var self$1 = $as_T2(e1N.head__O())._1__O();
+        var ev$2 = $as_T(self$1);
+        var e1 = $as_Llambda_syntax_Program$Term($as_T2(e1N.head__O())._2__O());
+        var y$1 = new $c_Llambda_syntax_Program$Term$App(e1, x55);
+        var elems$2 = $$x2.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(ev$2, y$1)]));
+        return this$11.from__sc_IterableOnce__sci_Set(elems$2)
+      } else if ((x54 instanceof $c_Llambda_syntax_Program$Term$Lam)) {
+        var x$1$2 = $as_Llambda_syntax_Program$Term$Lam(x54);
+        var x4 = x$1$2.Llambda_syntax_Program$Term$Lam__f_x;
+        var x5 = x$1$2.Llambda_syntax_Program$Term$Lam__f_e;
+        var this$15 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x3 = $m_sr_ScalaRunTime$();
+        var self$2 = ("beta-" + x4);
+        var y$2 = $m_Llambda_backend_Semantics$().subst__Llambda_syntax_Program$Term__T__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term(x5, x4, x55);
+        var elems$3 = $$x3.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(self$2, y$2)]));
+        return this$15.from__sc_IterableOnce__sci_Set(elems$3)
+      } else {
+        var this$16 = $m_s_Predef$().s_Predef$__f_Set;
+        var elems$4 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
+        return this$16.from__sc_IterableOnce__sci_Set(elems$4)
+      }
+    }
+  };
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Lam)) {
+    var x$1$3 = $as_Llambda_syntax_Program$Term$Lam(st);
+    var x50 = x$1$3.Llambda_syntax_Program$Term$Lam__f_x;
+    var x51 = x$1$3.Llambda_syntax_Program$Term$Lam__f_e;
+    return $as_sci_Set(this.next__Llambda_syntax_Program$Term__sci_Set(x51).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$18) => ((x$1$4) => {
+      var x$1$5 = $as_T2(x$1$4);
+      return ((x$1$5 !== null) && ($as_T(x$1$5._1__O()), $as_Llambda_syntax_Program$Term(x$1$5._2__O()), true))
+    }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$2$1, x$3) => ((x$1$2$1) => {
+      var x$1$2$2 = $as_T2(x$1$2$1);
+      if ((x$1$2$2 !== null)) {
+        var by$1 = $as_T(x$1$2$2._1__O());
+        var to$1 = $as_Llambda_syntax_Program$Term(x$1$2$2._2__O());
+        var y$3 = new $c_Llambda_syntax_Program$Term$Lam(x$3, to$1);
+        return new $c_T2(by$1, y$3)
+      };
+      throw new $c_s_MatchError(x$1$2$2)
+    }))(this, x50))))
+  };
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Val)) {
+    var x$1$6 = $as_Llambda_syntax_Program$Term$Val(st);
+    var this$23 = $m_s_Predef$().s_Predef$__f_Set;
+    var elems$5 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
+    return this$23.from__sc_IterableOnce__sci_Set(elems$5)
+  };
+  if ((st instanceof $c_Llambda_syntax_Program$Term$Add)) {
+    var x$1$7 = $as_Llambda_syntax_Program$Term$Add(st);
+    var x37 = x$1$7.Llambda_syntax_Program$Term$Add__f_e1;
+    var x38 = x$1$7.Llambda_syntax_Program$Term$Add__f_e2;
+    if ((x37 instanceof $c_Llambda_syntax_Program$Term$Val)) {
+      var x$1$8 = $as_Llambda_syntax_Program$Term$Val(x37);
+      var x44 = x$1$8.Llambda_syntax_Program$Term$Val__f_n;
+      if ((x38 instanceof $c_Llambda_syntax_Program$Term$Val)) {
+        var x$1$9 = $as_Llambda_syntax_Program$Term$Val(x38);
+        var x41 = x$1$9.Llambda_syntax_Program$Term$Val__f_n;
+        var this$30 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x4 = $m_sr_ScalaRunTime$();
+        var n = ((x44 + x41) | 0);
+        var y$4 = new $c_Llambda_syntax_Program$Term$Val(n);
+        var elems$6 = $$x4.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("+", y$4)]));
+        return this$30.from__sc_IterableOnce__sci_Set(elems$6)
+      }
+    };
+    var e2N$2 = this.next__Llambda_syntax_Program$Term__sci_Set(x38);
+    if ((!e2N$2.isEmpty__Z())) {
+      var this$34 = $m_s_Predef$().s_Predef$__f_Set;
+      var $$x5 = $m_sr_ScalaRunTime$();
+      var self$3 = $as_T2(e2N$2.head__O())._1__O();
+      var ev$6 = $as_T(self$3);
+      var e2$1 = $as_Llambda_syntax_Program$Term($as_T2(e2N$2.head__O())._2__O());
+      var y$5 = new $c_Llambda_syntax_Program$Term$Add(x37, e2$1);
+      var elems$7 = $$x5.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(ev$6, y$5)]));
+      return this$34.from__sc_IterableOnce__sci_Set(elems$7)
+    } else {
+      return $as_sci_Set(this.next__Llambda_syntax_Program$Term__sci_Set(x37).withFilter__F1__sc_WithFilter(new $c_sjsr_AnonFunction1(((this$3$1) => ((x$1$3$1) => {
+        var x$1$10 = $as_T2(x$1$3$1);
+        return ((x$1$10 !== null) && ($as_T(x$1$10._1__O()), $as_Llambda_syntax_Program$Term(x$1$10._2__O()), true))
+      }))(this))).map__F1__O(new $c_sjsr_AnonFunction1(((this$4$1, e2$3) => ((x$1$4$1) => {
+        var x$1$11 = $as_T2(x$1$4$1);
+        if ((x$1$11 !== null)) {
+          var by$3 = $as_T(x$1$11._1__O());
+          var to$3 = $as_Llambda_syntax_Program$Term(x$1$11._2__O());
+          var y$6 = new $c_Llambda_syntax_Program$Term$Add(to$3, e2$3);
+          return new $c_T2(by$3, y$6)
+        };
+        throw new $c_s_MatchError(x$1$11)
+      }))(this, x38))))
+    }
+  };
+  if ((st instanceof $c_Llambda_syntax_Program$Term$If0)) {
+    var x$1$12 = $as_Llambda_syntax_Program$Term$If0(st);
+    var x28 = x$1$12.Llambda_syntax_Program$Term$If0__f_e1;
+    var x29 = x$1$12.Llambda_syntax_Program$Term$If0__f_e2;
+    var x30 = x$1$12.Llambda_syntax_Program$Term$If0__f_e3;
+    var e2N$3 = this.next__Llambda_syntax_Program$Term__sci_Set(x29);
+    if ((!e2N$3.isEmpty__Z())) {
+      var this$42 = $m_s_Predef$().s_Predef$__f_Set;
+      var $$x6 = $m_sr_ScalaRunTime$();
+      var self$4 = $as_T2(e2N$3.head__O())._1__O();
+      var ev$8 = $as_T(self$4);
+      var e2$2 = $as_Llambda_syntax_Program$Term($as_T2(e2N$3.head__O())._2__O());
+      var y$7 = new $c_Llambda_syntax_Program$Term$If0(x28, e2$2, x30);
+      var elems$8 = $$x6.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(ev$8, y$7)]));
+      return this$42.from__sc_IterableOnce__sci_Set(elems$8)
+    } else {
+      var e3N = this.next__Llambda_syntax_Program$Term__sci_Set(x30);
+      if ((!e3N.isEmpty__Z())) {
+        var this$46 = $m_s_Predef$().s_Predef$__f_Set;
+        var $$x7 = $m_sr_ScalaRunTime$();
+        var self$5 = $as_T2(e3N.head__O())._1__O();
+        var ev$9 = $as_T(self$5);
+        var e3 = $as_Llambda_syntax_Program$Term($as_T2(e3N.head__O())._2__O());
+        var y$8 = new $c_Llambda_syntax_Program$Term$If0(x28, x29, e3);
+        var elems$9 = $$x7.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(ev$9, y$8)]));
+        return this$46.from__sc_IterableOnce__sci_Set(elems$9)
+      } else {
+        var e1N$2 = this.next__Llambda_syntax_Program$Term__sci_Set(x28);
+        if ((!e1N$2.isEmpty__Z())) {
+          var this$50 = $m_s_Predef$().s_Predef$__f_Set;
+          var $$x8 = $m_sr_ScalaRunTime$();
+          var self$6 = $as_T2(e1N$2.head__O())._1__O();
+          var ev$10 = $as_T(self$6);
+          var e1$1 = $as_Llambda_syntax_Program$Term($as_T2(e1N$2.head__O())._2__O());
+          var y$9 = new $c_Llambda_syntax_Program$Term$If0(e1$1, x29, x30);
+          var elems$10 = $$x8.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2(ev$10, y$9)]));
+          return this$50.from__sc_IterableOnce__sci_Set(elems$10)
+        } else {
+          if ((x28 instanceof $c_Llambda_syntax_Program$Term$Val)) {
+            var x$1$13 = $as_Llambda_syntax_Program$Term$Val(x28);
+            var x24 = x$1$13.Llambda_syntax_Program$Term$Val__f_n;
+            if ((x24 === 0)) {
+              var this$54 = $m_s_Predef$().s_Predef$__f_Set;
+              var elems$11 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if0-true", x29)]));
+              return this$54.from__sc_IterableOnce__sci_Set(elems$11)
+            };
+            var this$57 = $m_s_Predef$().s_Predef$__f_Set;
+            var elems$12 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([new $c_T2("if0-false", x30)]));
+            return this$57.from__sc_IterableOnce__sci_Set(elems$12)
+          };
+          var this$58 = $m_s_Predef$().s_Predef$__f_Set;
+          var elems$13 = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([]));
+          return this$58.from__sc_IterableOnce__sci_Set(elems$13)
+        }
+      }
+    }
+  };
+  throw new $c_s_MatchError(st)
+});
+var $d_Llambda_backend_StrictSemantics$ = new $TypeData().initClass({
+  Llambda_backend_StrictSemantics$: 0
+}, false, "lambda.backend.StrictSemantics$", {
+  Llambda_backend_StrictSemantics$: 1,
+  O: 1,
+  Lcaos_sos_SOS: 1
+});
+$c_Llambda_backend_StrictSemantics$.prototype.$classData = $d_Llambda_backend_StrictSemantics$;
+var $n_Llambda_backend_StrictSemantics$;
+function $m_Llambda_backend_StrictSemantics$() {
+  if ((!$n_Llambda_backend_StrictSemantics$)) {
+    $n_Llambda_backend_StrictSemantics$ = new $c_Llambda_backend_StrictSemantics$()
+  };
+  return $n_Llambda_backend_StrictSemantics$
+}
+/** @constructor */
 function $c_Llambda_frontend_CaosConfig$() {
   this.Llambda_frontend_CaosConfig$__f_smallWidgets = null;
   this.Llambda_frontend_CaosConfig$__f_name = null;
@@ -18628,39 +19015,55 @@ function $c_Llambda_frontend_CaosConfig$() {
   this.Llambda_frontend_CaosConfig$__f_languageName = "Lambda Calculus with addition";
   this.Llambda_frontend_CaosConfig$__f_parser = new $c_sjsr_AnonFunction1(((this$1) => ((str) => {
     var str$1 = $as_T(str);
-    return $m_Llambda_syntax_Parser$().parseProgram__T__Llambda_syntax_Program$Expression(str$1)
+    return $m_Llambda_syntax_Parser$().parseProgram__T__Llambda_syntax_Program$Term(str$1)
   }))(this));
   $m_s_package$();
   var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcaos_common_Example.getArrayOf().constr)([new $c_Lcaos_common_Example("(\\x -> x + 1) 2", "succ", "Adds 1 to number 2"), new $c_Lcaos_common_Example("(\\x -> x x) (\\y -> y y)", "omega", "infinite beta reductions"), new $c_Lcaos_common_Example("((\\x -> x + 1) 2) \n+ \n((\\y -> y + 1) 3)", "non-determ", "non-determinism when evaluating term"), new $c_Lcaos_common_Example("(\\n -> if0 n 1\n   ((\\x -> (x x)) (\\x -> (x x)))\n) (2+2)", "if0", "Example with infinite beta reductions inside a reduceable term, borrowed from https://redex.racket-lang.org/lam-v.html."), new $c_Lcaos_common_Example("((\\le -> \n   ((\\f -> (le (\\x -> ((f f) x))))\n    (\\f -> (le (\\x -> ((f f) x))))))\n (\\triangle ->\n   (\\x ->\n     (if0 x\n          0\n          (x + (triangle (x + (-1))))))))", "triangle", "Triangle example taken from the SEwPR book - https://redex.racket-lang.org/lam-v.html")]));
   this.Llambda_frontend_CaosConfig$__f_examples = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
   $m_s_package$();
-  var $$x4 = $m_sr_ScalaRunTime$();
+  var $$x6 = $m_sr_ScalaRunTime$();
   var y = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$2$1) => ((_$1) => {
-    var _$1$1 = $as_Llambda_syntax_Program$Expression(_$1);
+    var _$1$1 = $as_Llambda_syntax_Program$Term(_$1);
     return _$1$1.toString__T()
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x3 = new $c_T2("View parsed data", y);
+  var $$x5 = new $c_T2("View parsed data", y);
   var y$1 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$3$1) => ((e) => {
-    var e$1 = $as_Llambda_syntax_Program$Expression(e);
-    return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Expression__T(e$1)
+    var e$1 = $as_Llambda_syntax_Program$Term(e);
+    return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e$1)
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x2 = new $c_T2("View pretty data", y$1);
+  var $$x4 = new $c_T2("View pretty data", y$1);
   var y$2 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$4$1) => ((e$2) => {
-    var e$3 = $as_Llambda_syntax_Program$Expression(e$2);
+    var e$3 = $as_Llambda_syntax_Program$Term(e$2);
     return e$3
   }))(this)), $m_Llambda_backend_Semantics$(), new $c_sjsr_AnonFunction1(((this$5$1) => ((e$3$1) => {
-    var e$4 = $as_Llambda_syntax_Program$Expression(e$3$1);
-    return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Expression__T(e$4)
+    var e$4 = $as_Llambda_syntax_Program$Term(e$3$1);
+    return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e$4)
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x1 = new $c_T2("Run semantics", y$2);
+  var $$x3 = new $c_T2("Run semantics", y$2);
   var y$3 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$6$1) => ((e$4$1) => {
-    var e$5 = $as_Llambda_syntax_Program$Expression(e$4$1);
+    var e$5 = $as_Llambda_syntax_Program$Term(e$4$1);
     return e$5
   }))(this)), $m_Llambda_backend_Semantics$(), new $c_sjsr_AnonFunction1(((this$7$1) => ((x) => {
-    var x$1 = $as_Llambda_syntax_Program$Expression(x);
-    return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Expression__T(x$1)
+    var x$1 = $as_Llambda_syntax_Program$Term(x);
+    return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(x$1)
   }))(this)), $m_Lcaos_frontend_Configurator$().lts$default$4__F1(), 80);
-  var elems$1 = $$x4.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x3, $$x2, $$x1, new $c_T2("Build LTS", y$3)]));
+  var $$x2 = new $c_T2("Build LTS", y$3);
+  var y$4 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$8$1) => ((e$5$1) => {
+    var e$6 = $as_Llambda_syntax_Program$Term(e$5$1);
+    return e$6
+  }))(this)), $m_Llambda_backend_LazySemantics$(), new $c_sjsr_AnonFunction1(((this$9$1) => ((x$2) => {
+    var x$3 = $as_Llambda_syntax_Program$Term(x$2);
+    return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(x$3)
+  }))(this)), $m_Lcaos_frontend_Configurator$().lts$default$4__F1(), 80);
+  var $$x1 = new $c_T2("Build LTS - Lazy Evaluation", y$4);
+  var y$5 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$10$1) => ((e$6$1) => {
+    var e$7 = $as_Llambda_syntax_Program$Term(e$6$1);
+    return e$7
+  }))(this)), $m_Llambda_backend_StrictSemantics$(), new $c_sjsr_AnonFunction1(((this$11$1) => ((x$3$1) => {
+    var x$4 = $as_Llambda_syntax_Program$Term(x$3$1);
+    return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(x$4)
+  }))(this)), $m_Lcaos_frontend_Configurator$().lts$default$4__F1(), 80);
+  var elems$1 = $$x6.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x5, $$x4, $$x3, $$x2, $$x1, new $c_T2("Build LTS - Strict Evaluation", y$5)]));
   this.Llambda_frontend_CaosConfig$__f_widgets = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$1)
 }
 $c_Llambda_frontend_CaosConfig$.prototype = new $h_O();
@@ -32320,27 +32723,27 @@ var $d_ju_NoSuchElementException = new $TypeData().initClass({
 });
 $c_ju_NoSuchElementException.prototype.$classData = $d_ju_NoSuchElementException;
 /** @constructor */
-function $c_Llambda_syntax_Program$Expression() {
+function $c_Llambda_syntax_Program$Term() {
   /*<skip>*/
 }
-$c_Llambda_syntax_Program$Expression.prototype = new $h_O();
-$c_Llambda_syntax_Program$Expression.prototype.constructor = $c_Llambda_syntax_Program$Expression;
+$c_Llambda_syntax_Program$Term.prototype = new $h_O();
+$c_Llambda_syntax_Program$Term.prototype.constructor = $c_Llambda_syntax_Program$Term;
 /** @constructor */
-function $h_Llambda_syntax_Program$Expression() {
+function $h_Llambda_syntax_Program$Term() {
   /*<skip>*/
 }
-$h_Llambda_syntax_Program$Expression.prototype = $c_Llambda_syntax_Program$Expression.prototype;
-$c_Llambda_syntax_Program$Expression.prototype.productIterator__sc_Iterator = (function() {
+$h_Llambda_syntax_Program$Term.prototype = $c_Llambda_syntax_Program$Term.prototype;
+$c_Llambda_syntax_Program$Term.prototype.productIterator__sc_Iterator = (function() {
   return new $c_s_Product$$anon$1(this)
 });
-function $as_Llambda_syntax_Program$Expression(obj) {
-  return (((obj instanceof $c_Llambda_syntax_Program$Expression) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Expression"))
+function $as_Llambda_syntax_Program$Term(obj) {
+  return (((obj instanceof $c_Llambda_syntax_Program$Term) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Term"))
 }
-function $isArrayOf_Llambda_syntax_Program$Expression(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Expression)))
+function $isArrayOf_Llambda_syntax_Program$Term(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Term)))
 }
-function $asArrayOf_Llambda_syntax_Program$Expression(obj, depth) {
-  return (($isArrayOf_Llambda_syntax_Program$Expression(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Expression;", depth))
+function $asArrayOf_Llambda_syntax_Program$Term(obj, depth) {
+  return (($isArrayOf_Llambda_syntax_Program$Term(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Term;", depth))
 }
 class $c_Lorg_scalajs_linker_runtime_UndefinedBehaviorError extends $c_jl_VirtualMachineError {
   constructor(cause) {
@@ -39556,33 +39959,33 @@ var $d_ju_regex_PatternSyntaxException = new $TypeData().initClass({
 });
 $c_ju_regex_PatternSyntaxException.prototype.$classData = $d_ju_regex_PatternSyntaxException;
 /** @constructor */
-function $c_Llambda_syntax_Program$Expression$Add(e1, e2) {
-  this.Llambda_syntax_Program$Expression$Add__f_e1 = null;
-  this.Llambda_syntax_Program$Expression$Add__f_e2 = null;
-  this.Llambda_syntax_Program$Expression$Add__f_e1 = e1;
-  this.Llambda_syntax_Program$Expression$Add__f_e2 = e2
+function $c_Llambda_syntax_Program$Term$Add(e1, e2) {
+  this.Llambda_syntax_Program$Term$Add__f_e1 = null;
+  this.Llambda_syntax_Program$Term$Add__f_e2 = null;
+  this.Llambda_syntax_Program$Term$Add__f_e1 = e1;
+  this.Llambda_syntax_Program$Term$Add__f_e2 = e2
 }
-$c_Llambda_syntax_Program$Expression$Add.prototype = new $h_Llambda_syntax_Program$Expression();
-$c_Llambda_syntax_Program$Expression$Add.prototype.constructor = $c_Llambda_syntax_Program$Expression$Add;
+$c_Llambda_syntax_Program$Term$Add.prototype = new $h_Llambda_syntax_Program$Term();
+$c_Llambda_syntax_Program$Term$Add.prototype.constructor = $c_Llambda_syntax_Program$Term$Add;
 /** @constructor */
-function $h_Llambda_syntax_Program$Expression$Add() {
+function $h_Llambda_syntax_Program$Term$Add() {
   /*<skip>*/
 }
-$h_Llambda_syntax_Program$Expression$Add.prototype = $c_Llambda_syntax_Program$Expression$Add.prototype;
-$c_Llambda_syntax_Program$Expression$Add.prototype.hashCode__I = (function() {
+$h_Llambda_syntax_Program$Term$Add.prototype = $c_Llambda_syntax_Program$Term$Add.prototype;
+$c_Llambda_syntax_Program$Term$Add.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
   return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
 });
-$c_Llambda_syntax_Program$Expression$Add.prototype.equals__O__Z = (function(x$0) {
+$c_Llambda_syntax_Program$Term$Add.prototype.equals__O__Z = (function(x$0) {
   if ((this === x$0)) {
     return true
-  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Expression$Add)) {
-    var x$0$2 = $as_Llambda_syntax_Program$Expression$Add(x$0);
-    var x = this.Llambda_syntax_Program$Expression$Add__f_e1;
-    var x$2 = x$0$2.Llambda_syntax_Program$Expression$Add__f_e1;
+  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Term$Add)) {
+    var x$0$2 = $as_Llambda_syntax_Program$Term$Add(x$0);
+    var x = this.Llambda_syntax_Program$Term$Add__f_e1;
+    var x$2 = x$0$2.Llambda_syntax_Program$Term$Add__f_e1;
     if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
-      var x$3 = this.Llambda_syntax_Program$Expression$Add__f_e2;
-      var x$4 = x$0$2.Llambda_syntax_Program$Expression$Add__f_e2;
+      var x$3 = this.Llambda_syntax_Program$Term$Add__f_e2;
+      var x$4 = x$0$2.Llambda_syntax_Program$Term$Add__f_e2;
       return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
     } else {
       return false
@@ -39591,73 +39994,73 @@ $c_Llambda_syntax_Program$Expression$Add.prototype.equals__O__Z = (function(x$0)
     return false
   }
 });
-$c_Llambda_syntax_Program$Expression$Add.prototype.toString__T = (function() {
+$c_Llambda_syntax_Program$Term$Add.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
-$c_Llambda_syntax_Program$Expression$Add.prototype.productArity__I = (function() {
+$c_Llambda_syntax_Program$Term$Add.prototype.productArity__I = (function() {
   return 2
 });
-$c_Llambda_syntax_Program$Expression$Add.prototype.productPrefix__T = (function() {
+$c_Llambda_syntax_Program$Term$Add.prototype.productPrefix__T = (function() {
   return "Add"
 });
-$c_Llambda_syntax_Program$Expression$Add.prototype.productElement__I__O = (function(n) {
+$c_Llambda_syntax_Program$Term$Add.prototype.productElement__I__O = (function(n) {
   if ((n === 0)) {
-    return this.Llambda_syntax_Program$Expression$Add__f_e1
+    return this.Llambda_syntax_Program$Term$Add__f_e1
   };
   if ((n === 1)) {
-    return this.Llambda_syntax_Program$Expression$Add__f_e2
+    return this.Llambda_syntax_Program$Term$Add__f_e2
   };
   throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
 });
-function $as_Llambda_syntax_Program$Expression$Add(obj) {
-  return (((obj instanceof $c_Llambda_syntax_Program$Expression$Add) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Expression$Add"))
+function $as_Llambda_syntax_Program$Term$Add(obj) {
+  return (((obj instanceof $c_Llambda_syntax_Program$Term$Add) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Term$Add"))
 }
-function $isArrayOf_Llambda_syntax_Program$Expression$Add(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Expression$Add)))
+function $isArrayOf_Llambda_syntax_Program$Term$Add(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Term$Add)))
 }
-function $asArrayOf_Llambda_syntax_Program$Expression$Add(obj, depth) {
-  return (($isArrayOf_Llambda_syntax_Program$Expression$Add(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Expression$Add;", depth))
+function $asArrayOf_Llambda_syntax_Program$Term$Add(obj, depth) {
+  return (($isArrayOf_Llambda_syntax_Program$Term$Add(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Term$Add;", depth))
 }
-var $d_Llambda_syntax_Program$Expression$Add = new $TypeData().initClass({
-  Llambda_syntax_Program$Expression$Add: 0
-}, false, "lambda.syntax.Program$Expression$Add", {
-  Llambda_syntax_Program$Expression$Add: 1,
-  Llambda_syntax_Program$Expression: 1,
+var $d_Llambda_syntax_Program$Term$Add = new $TypeData().initClass({
+  Llambda_syntax_Program$Term$Add: 0
+}, false, "lambda.syntax.Program$Term$Add", {
+  Llambda_syntax_Program$Term$Add: 1,
+  Llambda_syntax_Program$Term: 1,
   O: 1,
   s_Equals: 1,
   s_Product: 1,
   Ljava_io_Serializable: 1,
   s_reflect_Enum: 1
 });
-$c_Llambda_syntax_Program$Expression$Add.prototype.$classData = $d_Llambda_syntax_Program$Expression$Add;
+$c_Llambda_syntax_Program$Term$Add.prototype.$classData = $d_Llambda_syntax_Program$Term$Add;
 /** @constructor */
-function $c_Llambda_syntax_Program$Expression$App(e1, e2) {
-  this.Llambda_syntax_Program$Expression$App__f_e1 = null;
-  this.Llambda_syntax_Program$Expression$App__f_e2 = null;
-  this.Llambda_syntax_Program$Expression$App__f_e1 = e1;
-  this.Llambda_syntax_Program$Expression$App__f_e2 = e2
+function $c_Llambda_syntax_Program$Term$App(e1, e2) {
+  this.Llambda_syntax_Program$Term$App__f_e1 = null;
+  this.Llambda_syntax_Program$Term$App__f_e2 = null;
+  this.Llambda_syntax_Program$Term$App__f_e1 = e1;
+  this.Llambda_syntax_Program$Term$App__f_e2 = e2
 }
-$c_Llambda_syntax_Program$Expression$App.prototype = new $h_Llambda_syntax_Program$Expression();
-$c_Llambda_syntax_Program$Expression$App.prototype.constructor = $c_Llambda_syntax_Program$Expression$App;
+$c_Llambda_syntax_Program$Term$App.prototype = new $h_Llambda_syntax_Program$Term();
+$c_Llambda_syntax_Program$Term$App.prototype.constructor = $c_Llambda_syntax_Program$Term$App;
 /** @constructor */
-function $h_Llambda_syntax_Program$Expression$App() {
+function $h_Llambda_syntax_Program$Term$App() {
   /*<skip>*/
 }
-$h_Llambda_syntax_Program$Expression$App.prototype = $c_Llambda_syntax_Program$Expression$App.prototype;
-$c_Llambda_syntax_Program$Expression$App.prototype.hashCode__I = (function() {
+$h_Llambda_syntax_Program$Term$App.prototype = $c_Llambda_syntax_Program$Term$App.prototype;
+$c_Llambda_syntax_Program$Term$App.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
   return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
 });
-$c_Llambda_syntax_Program$Expression$App.prototype.equals__O__Z = (function(x$0) {
+$c_Llambda_syntax_Program$Term$App.prototype.equals__O__Z = (function(x$0) {
   if ((this === x$0)) {
     return true
-  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Expression$App)) {
-    var x$0$2 = $as_Llambda_syntax_Program$Expression$App(x$0);
-    var x = this.Llambda_syntax_Program$Expression$App__f_e1;
-    var x$2 = x$0$2.Llambda_syntax_Program$Expression$App__f_e1;
+  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Term$App)) {
+    var x$0$2 = $as_Llambda_syntax_Program$Term$App(x$0);
+    var x = this.Llambda_syntax_Program$Term$App__f_e1;
+    var x$2 = x$0$2.Llambda_syntax_Program$Term$App__f_e1;
     if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
-      var x$3 = this.Llambda_syntax_Program$Expression$App__f_e2;
-      var x$4 = x$0$2.Llambda_syntax_Program$Expression$App__f_e2;
+      var x$3 = this.Llambda_syntax_Program$Term$App__f_e2;
+      var x$4 = x$0$2.Llambda_syntax_Program$Term$App__f_e2;
       return ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
     } else {
       return false
@@ -39666,82 +40069,82 @@ $c_Llambda_syntax_Program$Expression$App.prototype.equals__O__Z = (function(x$0)
     return false
   }
 });
-$c_Llambda_syntax_Program$Expression$App.prototype.toString__T = (function() {
+$c_Llambda_syntax_Program$Term$App.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
-$c_Llambda_syntax_Program$Expression$App.prototype.productArity__I = (function() {
+$c_Llambda_syntax_Program$Term$App.prototype.productArity__I = (function() {
   return 2
 });
-$c_Llambda_syntax_Program$Expression$App.prototype.productPrefix__T = (function() {
+$c_Llambda_syntax_Program$Term$App.prototype.productPrefix__T = (function() {
   return "App"
 });
-$c_Llambda_syntax_Program$Expression$App.prototype.productElement__I__O = (function(n) {
+$c_Llambda_syntax_Program$Term$App.prototype.productElement__I__O = (function(n) {
   if ((n === 0)) {
-    return this.Llambda_syntax_Program$Expression$App__f_e1
+    return this.Llambda_syntax_Program$Term$App__f_e1
   };
   if ((n === 1)) {
-    return this.Llambda_syntax_Program$Expression$App__f_e2
+    return this.Llambda_syntax_Program$Term$App__f_e2
   };
   throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
 });
-function $as_Llambda_syntax_Program$Expression$App(obj) {
-  return (((obj instanceof $c_Llambda_syntax_Program$Expression$App) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Expression$App"))
+function $as_Llambda_syntax_Program$Term$App(obj) {
+  return (((obj instanceof $c_Llambda_syntax_Program$Term$App) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Term$App"))
 }
-function $isArrayOf_Llambda_syntax_Program$Expression$App(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Expression$App)))
+function $isArrayOf_Llambda_syntax_Program$Term$App(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Term$App)))
 }
-function $asArrayOf_Llambda_syntax_Program$Expression$App(obj, depth) {
-  return (($isArrayOf_Llambda_syntax_Program$Expression$App(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Expression$App;", depth))
+function $asArrayOf_Llambda_syntax_Program$Term$App(obj, depth) {
+  return (($isArrayOf_Llambda_syntax_Program$Term$App(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Term$App;", depth))
 }
-var $d_Llambda_syntax_Program$Expression$App = new $TypeData().initClass({
-  Llambda_syntax_Program$Expression$App: 0
-}, false, "lambda.syntax.Program$Expression$App", {
-  Llambda_syntax_Program$Expression$App: 1,
-  Llambda_syntax_Program$Expression: 1,
+var $d_Llambda_syntax_Program$Term$App = new $TypeData().initClass({
+  Llambda_syntax_Program$Term$App: 0
+}, false, "lambda.syntax.Program$Term$App", {
+  Llambda_syntax_Program$Term$App: 1,
+  Llambda_syntax_Program$Term: 1,
   O: 1,
   s_Equals: 1,
   s_Product: 1,
   Ljava_io_Serializable: 1,
   s_reflect_Enum: 1
 });
-$c_Llambda_syntax_Program$Expression$App.prototype.$classData = $d_Llambda_syntax_Program$Expression$App;
+$c_Llambda_syntax_Program$Term$App.prototype.$classData = $d_Llambda_syntax_Program$Term$App;
 /** @constructor */
-function $c_Llambda_syntax_Program$Expression$If0(e1, e2, e3) {
-  this.Llambda_syntax_Program$Expression$If0__f_e1 = null;
-  this.Llambda_syntax_Program$Expression$If0__f_e2 = null;
-  this.Llambda_syntax_Program$Expression$If0__f_e3 = null;
-  this.Llambda_syntax_Program$Expression$If0__f_e1 = e1;
-  this.Llambda_syntax_Program$Expression$If0__f_e2 = e2;
-  this.Llambda_syntax_Program$Expression$If0__f_e3 = e3
+function $c_Llambda_syntax_Program$Term$If0(e1, e2, e3) {
+  this.Llambda_syntax_Program$Term$If0__f_e1 = null;
+  this.Llambda_syntax_Program$Term$If0__f_e2 = null;
+  this.Llambda_syntax_Program$Term$If0__f_e3 = null;
+  this.Llambda_syntax_Program$Term$If0__f_e1 = e1;
+  this.Llambda_syntax_Program$Term$If0__f_e2 = e2;
+  this.Llambda_syntax_Program$Term$If0__f_e3 = e3
 }
-$c_Llambda_syntax_Program$Expression$If0.prototype = new $h_Llambda_syntax_Program$Expression();
-$c_Llambda_syntax_Program$Expression$If0.prototype.constructor = $c_Llambda_syntax_Program$Expression$If0;
+$c_Llambda_syntax_Program$Term$If0.prototype = new $h_Llambda_syntax_Program$Term();
+$c_Llambda_syntax_Program$Term$If0.prototype.constructor = $c_Llambda_syntax_Program$Term$If0;
 /** @constructor */
-function $h_Llambda_syntax_Program$Expression$If0() {
+function $h_Llambda_syntax_Program$Term$If0() {
   /*<skip>*/
 }
-$h_Llambda_syntax_Program$Expression$If0.prototype = $c_Llambda_syntax_Program$Expression$If0.prototype;
-$c_Llambda_syntax_Program$Expression$If0.prototype.hashCode__I = (function() {
+$h_Llambda_syntax_Program$Term$If0.prototype = $c_Llambda_syntax_Program$Term$If0.prototype;
+$c_Llambda_syntax_Program$Term$If0.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
   return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
 });
-$c_Llambda_syntax_Program$Expression$If0.prototype.equals__O__Z = (function(x$0) {
+$c_Llambda_syntax_Program$Term$If0.prototype.equals__O__Z = (function(x$0) {
   if ((this === x$0)) {
     return true
-  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Expression$If0)) {
-    var x$0$2 = $as_Llambda_syntax_Program$Expression$If0(x$0);
-    var x = this.Llambda_syntax_Program$Expression$If0__f_e1;
-    var x$2 = x$0$2.Llambda_syntax_Program$Expression$If0__f_e1;
+  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Term$If0)) {
+    var x$0$2 = $as_Llambda_syntax_Program$Term$If0(x$0);
+    var x = this.Llambda_syntax_Program$Term$If0__f_e1;
+    var x$2 = x$0$2.Llambda_syntax_Program$Term$If0__f_e1;
     if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
-      var x$3 = this.Llambda_syntax_Program$Expression$If0__f_e2;
-      var x$4 = x$0$2.Llambda_syntax_Program$Expression$If0__f_e2;
+      var x$3 = this.Llambda_syntax_Program$Term$If0__f_e2;
+      var x$4 = x$0$2.Llambda_syntax_Program$Term$If0__f_e2;
       var $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
     } else {
       var $$x1 = false
     };
     if ($$x1) {
-      var x$5 = this.Llambda_syntax_Program$Expression$If0__f_e3;
-      var x$6 = x$0$2.Llambda_syntax_Program$Expression$If0__f_e3;
+      var x$5 = this.Llambda_syntax_Program$Term$If0__f_e3;
+      var x$6 = x$0$2.Llambda_syntax_Program$Term$If0__f_e3;
       return ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
     } else {
       return false
@@ -39750,27 +40153,27 @@ $c_Llambda_syntax_Program$Expression$If0.prototype.equals__O__Z = (function(x$0)
     return false
   }
 });
-$c_Llambda_syntax_Program$Expression$If0.prototype.toString__T = (function() {
+$c_Llambda_syntax_Program$Term$If0.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
-$c_Llambda_syntax_Program$Expression$If0.prototype.productArity__I = (function() {
+$c_Llambda_syntax_Program$Term$If0.prototype.productArity__I = (function() {
   return 3
 });
-$c_Llambda_syntax_Program$Expression$If0.prototype.productPrefix__T = (function() {
+$c_Llambda_syntax_Program$Term$If0.prototype.productPrefix__T = (function() {
   return "If0"
 });
-$c_Llambda_syntax_Program$Expression$If0.prototype.productElement__I__O = (function(n) {
+$c_Llambda_syntax_Program$Term$If0.prototype.productElement__I__O = (function(n) {
   switch (n) {
     case 0: {
-      return this.Llambda_syntax_Program$Expression$If0__f_e1;
+      return this.Llambda_syntax_Program$Term$If0__f_e1;
       break
     }
     case 1: {
-      return this.Llambda_syntax_Program$Expression$If0__f_e2;
+      return this.Llambda_syntax_Program$Term$If0__f_e2;
       break
     }
     case 2: {
-      return this.Llambda_syntax_Program$Expression$If0__f_e3;
+      return this.Llambda_syntax_Program$Term$If0__f_e3;
       break
     }
     default: {
@@ -39778,53 +40181,53 @@ $c_Llambda_syntax_Program$Expression$If0.prototype.productElement__I__O = (funct
     }
   }
 });
-function $as_Llambda_syntax_Program$Expression$If0(obj) {
-  return (((obj instanceof $c_Llambda_syntax_Program$Expression$If0) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Expression$If0"))
+function $as_Llambda_syntax_Program$Term$If0(obj) {
+  return (((obj instanceof $c_Llambda_syntax_Program$Term$If0) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Term$If0"))
 }
-function $isArrayOf_Llambda_syntax_Program$Expression$If0(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Expression$If0)))
+function $isArrayOf_Llambda_syntax_Program$Term$If0(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Term$If0)))
 }
-function $asArrayOf_Llambda_syntax_Program$Expression$If0(obj, depth) {
-  return (($isArrayOf_Llambda_syntax_Program$Expression$If0(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Expression$If0;", depth))
+function $asArrayOf_Llambda_syntax_Program$Term$If0(obj, depth) {
+  return (($isArrayOf_Llambda_syntax_Program$Term$If0(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Term$If0;", depth))
 }
-var $d_Llambda_syntax_Program$Expression$If0 = new $TypeData().initClass({
-  Llambda_syntax_Program$Expression$If0: 0
-}, false, "lambda.syntax.Program$Expression$If0", {
-  Llambda_syntax_Program$Expression$If0: 1,
-  Llambda_syntax_Program$Expression: 1,
+var $d_Llambda_syntax_Program$Term$If0 = new $TypeData().initClass({
+  Llambda_syntax_Program$Term$If0: 0
+}, false, "lambda.syntax.Program$Term$If0", {
+  Llambda_syntax_Program$Term$If0: 1,
+  Llambda_syntax_Program$Term: 1,
   O: 1,
   s_Equals: 1,
   s_Product: 1,
   Ljava_io_Serializable: 1,
   s_reflect_Enum: 1
 });
-$c_Llambda_syntax_Program$Expression$If0.prototype.$classData = $d_Llambda_syntax_Program$Expression$If0;
+$c_Llambda_syntax_Program$Term$If0.prototype.$classData = $d_Llambda_syntax_Program$Term$If0;
 /** @constructor */
-function $c_Llambda_syntax_Program$Expression$Lam(x, e) {
-  this.Llambda_syntax_Program$Expression$Lam__f_x = null;
-  this.Llambda_syntax_Program$Expression$Lam__f_e = null;
-  this.Llambda_syntax_Program$Expression$Lam__f_x = x;
-  this.Llambda_syntax_Program$Expression$Lam__f_e = e
+function $c_Llambda_syntax_Program$Term$Lam(x, e) {
+  this.Llambda_syntax_Program$Term$Lam__f_x = null;
+  this.Llambda_syntax_Program$Term$Lam__f_e = null;
+  this.Llambda_syntax_Program$Term$Lam__f_x = x;
+  this.Llambda_syntax_Program$Term$Lam__f_e = e
 }
-$c_Llambda_syntax_Program$Expression$Lam.prototype = new $h_Llambda_syntax_Program$Expression();
-$c_Llambda_syntax_Program$Expression$Lam.prototype.constructor = $c_Llambda_syntax_Program$Expression$Lam;
+$c_Llambda_syntax_Program$Term$Lam.prototype = new $h_Llambda_syntax_Program$Term();
+$c_Llambda_syntax_Program$Term$Lam.prototype.constructor = $c_Llambda_syntax_Program$Term$Lam;
 /** @constructor */
-function $h_Llambda_syntax_Program$Expression$Lam() {
+function $h_Llambda_syntax_Program$Term$Lam() {
   /*<skip>*/
 }
-$h_Llambda_syntax_Program$Expression$Lam.prototype = $c_Llambda_syntax_Program$Expression$Lam.prototype;
-$c_Llambda_syntax_Program$Expression$Lam.prototype.hashCode__I = (function() {
+$h_Llambda_syntax_Program$Term$Lam.prototype = $c_Llambda_syntax_Program$Term$Lam.prototype;
+$c_Llambda_syntax_Program$Term$Lam.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
   return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
 });
-$c_Llambda_syntax_Program$Expression$Lam.prototype.equals__O__Z = (function(x$0) {
+$c_Llambda_syntax_Program$Term$Lam.prototype.equals__O__Z = (function(x$0) {
   if ((this === x$0)) {
     return true
-  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Expression$Lam)) {
-    var x$0$2 = $as_Llambda_syntax_Program$Expression$Lam(x$0);
-    if ((this.Llambda_syntax_Program$Expression$Lam__f_x === x$0$2.Llambda_syntax_Program$Expression$Lam__f_x)) {
-      var x = this.Llambda_syntax_Program$Expression$Lam__f_e;
-      var x$2 = x$0$2.Llambda_syntax_Program$Expression$Lam__f_e;
+  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Term$Lam)) {
+    var x$0$2 = $as_Llambda_syntax_Program$Term$Lam(x$0);
+    if ((this.Llambda_syntax_Program$Term$Lam__f_x === x$0$2.Llambda_syntax_Program$Term$Lam__f_x)) {
+      var x = this.Llambda_syntax_Program$Term$Lam__f_e;
+      var x$2 = x$0$2.Llambda_syntax_Program$Term$Lam__f_e;
       return ((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))
     } else {
       return false
@@ -39833,176 +40236,176 @@ $c_Llambda_syntax_Program$Expression$Lam.prototype.equals__O__Z = (function(x$0)
     return false
   }
 });
-$c_Llambda_syntax_Program$Expression$Lam.prototype.toString__T = (function() {
+$c_Llambda_syntax_Program$Term$Lam.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
-$c_Llambda_syntax_Program$Expression$Lam.prototype.productArity__I = (function() {
+$c_Llambda_syntax_Program$Term$Lam.prototype.productArity__I = (function() {
   return 2
 });
-$c_Llambda_syntax_Program$Expression$Lam.prototype.productPrefix__T = (function() {
+$c_Llambda_syntax_Program$Term$Lam.prototype.productPrefix__T = (function() {
   return "Lam"
 });
-$c_Llambda_syntax_Program$Expression$Lam.prototype.productElement__I__O = (function(n) {
+$c_Llambda_syntax_Program$Term$Lam.prototype.productElement__I__O = (function(n) {
   if ((n === 0)) {
-    return this.Llambda_syntax_Program$Expression$Lam__f_x
+    return this.Llambda_syntax_Program$Term$Lam__f_x
   };
   if ((n === 1)) {
-    return this.Llambda_syntax_Program$Expression$Lam__f_e
+    return this.Llambda_syntax_Program$Term$Lam__f_e
   };
   throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
 });
-function $as_Llambda_syntax_Program$Expression$Lam(obj) {
-  return (((obj instanceof $c_Llambda_syntax_Program$Expression$Lam) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Expression$Lam"))
+function $as_Llambda_syntax_Program$Term$Lam(obj) {
+  return (((obj instanceof $c_Llambda_syntax_Program$Term$Lam) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Term$Lam"))
 }
-function $isArrayOf_Llambda_syntax_Program$Expression$Lam(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Expression$Lam)))
+function $isArrayOf_Llambda_syntax_Program$Term$Lam(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Term$Lam)))
 }
-function $asArrayOf_Llambda_syntax_Program$Expression$Lam(obj, depth) {
-  return (($isArrayOf_Llambda_syntax_Program$Expression$Lam(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Expression$Lam;", depth))
+function $asArrayOf_Llambda_syntax_Program$Term$Lam(obj, depth) {
+  return (($isArrayOf_Llambda_syntax_Program$Term$Lam(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Term$Lam;", depth))
 }
-var $d_Llambda_syntax_Program$Expression$Lam = new $TypeData().initClass({
-  Llambda_syntax_Program$Expression$Lam: 0
-}, false, "lambda.syntax.Program$Expression$Lam", {
-  Llambda_syntax_Program$Expression$Lam: 1,
-  Llambda_syntax_Program$Expression: 1,
+var $d_Llambda_syntax_Program$Term$Lam = new $TypeData().initClass({
+  Llambda_syntax_Program$Term$Lam: 0
+}, false, "lambda.syntax.Program$Term$Lam", {
+  Llambda_syntax_Program$Term$Lam: 1,
+  Llambda_syntax_Program$Term: 1,
   O: 1,
   s_Equals: 1,
   s_Product: 1,
   Ljava_io_Serializable: 1,
   s_reflect_Enum: 1
 });
-$c_Llambda_syntax_Program$Expression$Lam.prototype.$classData = $d_Llambda_syntax_Program$Expression$Lam;
+$c_Llambda_syntax_Program$Term$Lam.prototype.$classData = $d_Llambda_syntax_Program$Term$Lam;
 /** @constructor */
-function $c_Llambda_syntax_Program$Expression$Val(n) {
-  this.Llambda_syntax_Program$Expression$Val__f_n = 0;
-  this.Llambda_syntax_Program$Expression$Val__f_n = n
+function $c_Llambda_syntax_Program$Term$Val(n) {
+  this.Llambda_syntax_Program$Term$Val__f_n = 0;
+  this.Llambda_syntax_Program$Term$Val__f_n = n
 }
-$c_Llambda_syntax_Program$Expression$Val.prototype = new $h_Llambda_syntax_Program$Expression();
-$c_Llambda_syntax_Program$Expression$Val.prototype.constructor = $c_Llambda_syntax_Program$Expression$Val;
+$c_Llambda_syntax_Program$Term$Val.prototype = new $h_Llambda_syntax_Program$Term();
+$c_Llambda_syntax_Program$Term$Val.prototype.constructor = $c_Llambda_syntax_Program$Term$Val;
 /** @constructor */
-function $h_Llambda_syntax_Program$Expression$Val() {
+function $h_Llambda_syntax_Program$Term$Val() {
   /*<skip>*/
 }
-$h_Llambda_syntax_Program$Expression$Val.prototype = $c_Llambda_syntax_Program$Expression$Val.prototype;
-$c_Llambda_syntax_Program$Expression$Val.prototype.hashCode__I = (function() {
+$h_Llambda_syntax_Program$Term$Val.prototype = $c_Llambda_syntax_Program$Term$Val.prototype;
+$c_Llambda_syntax_Program$Term$Val.prototype.hashCode__I = (function() {
   var acc = (-889275714);
   var hash = acc;
   var data = $f_T__hashCode__I("Val");
   acc = $m_sr_Statics$().mix__I__I__I(hash, data);
   var hash$1 = acc;
-  var data$1 = this.Llambda_syntax_Program$Expression$Val__f_n;
+  var data$1 = this.Llambda_syntax_Program$Term$Val__f_n;
   acc = $m_sr_Statics$().mix__I__I__I(hash$1, data$1);
   var hash$2 = acc;
   return $m_sr_Statics$().finalizeHash__I__I__I(hash$2, 1)
 });
-$c_Llambda_syntax_Program$Expression$Val.prototype.equals__O__Z = (function(x$0) {
+$c_Llambda_syntax_Program$Term$Val.prototype.equals__O__Z = (function(x$0) {
   if ((this === x$0)) {
     return true
-  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Expression$Val)) {
-    var x$0$2 = $as_Llambda_syntax_Program$Expression$Val(x$0);
-    return (this.Llambda_syntax_Program$Expression$Val__f_n === x$0$2.Llambda_syntax_Program$Expression$Val__f_n)
+  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Term$Val)) {
+    var x$0$2 = $as_Llambda_syntax_Program$Term$Val(x$0);
+    return (this.Llambda_syntax_Program$Term$Val__f_n === x$0$2.Llambda_syntax_Program$Term$Val__f_n)
   } else {
     return false
   }
 });
-$c_Llambda_syntax_Program$Expression$Val.prototype.toString__T = (function() {
+$c_Llambda_syntax_Program$Term$Val.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
-$c_Llambda_syntax_Program$Expression$Val.prototype.productArity__I = (function() {
+$c_Llambda_syntax_Program$Term$Val.prototype.productArity__I = (function() {
   return 1
 });
-$c_Llambda_syntax_Program$Expression$Val.prototype.productPrefix__T = (function() {
+$c_Llambda_syntax_Program$Term$Val.prototype.productPrefix__T = (function() {
   return "Val"
 });
-$c_Llambda_syntax_Program$Expression$Val.prototype.productElement__I__O = (function(n) {
+$c_Llambda_syntax_Program$Term$Val.prototype.productElement__I__O = (function(n) {
   if ((n === 0)) {
-    return this.Llambda_syntax_Program$Expression$Val__f_n
+    return this.Llambda_syntax_Program$Term$Val__f_n
   };
   throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
 });
-function $as_Llambda_syntax_Program$Expression$Val(obj) {
-  return (((obj instanceof $c_Llambda_syntax_Program$Expression$Val) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Expression$Val"))
+function $as_Llambda_syntax_Program$Term$Val(obj) {
+  return (((obj instanceof $c_Llambda_syntax_Program$Term$Val) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Term$Val"))
 }
-function $isArrayOf_Llambda_syntax_Program$Expression$Val(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Expression$Val)))
+function $isArrayOf_Llambda_syntax_Program$Term$Val(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Term$Val)))
 }
-function $asArrayOf_Llambda_syntax_Program$Expression$Val(obj, depth) {
-  return (($isArrayOf_Llambda_syntax_Program$Expression$Val(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Expression$Val;", depth))
+function $asArrayOf_Llambda_syntax_Program$Term$Val(obj, depth) {
+  return (($isArrayOf_Llambda_syntax_Program$Term$Val(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Term$Val;", depth))
 }
-var $d_Llambda_syntax_Program$Expression$Val = new $TypeData().initClass({
-  Llambda_syntax_Program$Expression$Val: 0
-}, false, "lambda.syntax.Program$Expression$Val", {
-  Llambda_syntax_Program$Expression$Val: 1,
-  Llambda_syntax_Program$Expression: 1,
+var $d_Llambda_syntax_Program$Term$Val = new $TypeData().initClass({
+  Llambda_syntax_Program$Term$Val: 0
+}, false, "lambda.syntax.Program$Term$Val", {
+  Llambda_syntax_Program$Term$Val: 1,
+  Llambda_syntax_Program$Term: 1,
   O: 1,
   s_Equals: 1,
   s_Product: 1,
   Ljava_io_Serializable: 1,
   s_reflect_Enum: 1
 });
-$c_Llambda_syntax_Program$Expression$Val.prototype.$classData = $d_Llambda_syntax_Program$Expression$Val;
+$c_Llambda_syntax_Program$Term$Val.prototype.$classData = $d_Llambda_syntax_Program$Term$Val;
 /** @constructor */
-function $c_Llambda_syntax_Program$Expression$Var(x) {
-  this.Llambda_syntax_Program$Expression$Var__f_x = null;
-  this.Llambda_syntax_Program$Expression$Var__f_x = x
+function $c_Llambda_syntax_Program$Term$Var(x) {
+  this.Llambda_syntax_Program$Term$Var__f_x = null;
+  this.Llambda_syntax_Program$Term$Var__f_x = x
 }
-$c_Llambda_syntax_Program$Expression$Var.prototype = new $h_Llambda_syntax_Program$Expression();
-$c_Llambda_syntax_Program$Expression$Var.prototype.constructor = $c_Llambda_syntax_Program$Expression$Var;
+$c_Llambda_syntax_Program$Term$Var.prototype = new $h_Llambda_syntax_Program$Term();
+$c_Llambda_syntax_Program$Term$Var.prototype.constructor = $c_Llambda_syntax_Program$Term$Var;
 /** @constructor */
-function $h_Llambda_syntax_Program$Expression$Var() {
+function $h_Llambda_syntax_Program$Term$Var() {
   /*<skip>*/
 }
-$h_Llambda_syntax_Program$Expression$Var.prototype = $c_Llambda_syntax_Program$Expression$Var.prototype;
-$c_Llambda_syntax_Program$Expression$Var.prototype.hashCode__I = (function() {
+$h_Llambda_syntax_Program$Term$Var.prototype = $c_Llambda_syntax_Program$Term$Var.prototype;
+$c_Llambda_syntax_Program$Term$Var.prototype.hashCode__I = (function() {
   var this$2 = $m_s_util_hashing_MurmurHash3$();
   return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
 });
-$c_Llambda_syntax_Program$Expression$Var.prototype.equals__O__Z = (function(x$0) {
+$c_Llambda_syntax_Program$Term$Var.prototype.equals__O__Z = (function(x$0) {
   if ((this === x$0)) {
     return true
-  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Expression$Var)) {
-    var x$0$2 = $as_Llambda_syntax_Program$Expression$Var(x$0);
-    return (this.Llambda_syntax_Program$Expression$Var__f_x === x$0$2.Llambda_syntax_Program$Expression$Var__f_x)
+  } else if ((x$0 instanceof $c_Llambda_syntax_Program$Term$Var)) {
+    var x$0$2 = $as_Llambda_syntax_Program$Term$Var(x$0);
+    return (this.Llambda_syntax_Program$Term$Var__f_x === x$0$2.Llambda_syntax_Program$Term$Var__f_x)
   } else {
     return false
   }
 });
-$c_Llambda_syntax_Program$Expression$Var.prototype.toString__T = (function() {
+$c_Llambda_syntax_Program$Term$Var.prototype.toString__T = (function() {
   return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
 });
-$c_Llambda_syntax_Program$Expression$Var.prototype.productArity__I = (function() {
+$c_Llambda_syntax_Program$Term$Var.prototype.productArity__I = (function() {
   return 1
 });
-$c_Llambda_syntax_Program$Expression$Var.prototype.productPrefix__T = (function() {
+$c_Llambda_syntax_Program$Term$Var.prototype.productPrefix__T = (function() {
   return "Var"
 });
-$c_Llambda_syntax_Program$Expression$Var.prototype.productElement__I__O = (function(n) {
+$c_Llambda_syntax_Program$Term$Var.prototype.productElement__I__O = (function(n) {
   if ((n === 0)) {
-    return this.Llambda_syntax_Program$Expression$Var__f_x
+    return this.Llambda_syntax_Program$Term$Var__f_x
   };
   throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
 });
-function $as_Llambda_syntax_Program$Expression$Var(obj) {
-  return (((obj instanceof $c_Llambda_syntax_Program$Expression$Var) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Expression$Var"))
+function $as_Llambda_syntax_Program$Term$Var(obj) {
+  return (((obj instanceof $c_Llambda_syntax_Program$Term$Var) || (obj === null)) ? obj : $throwClassCastException(obj, "lambda.syntax.Program$Term$Var"))
 }
-function $isArrayOf_Llambda_syntax_Program$Expression$Var(obj, depth) {
-  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Expression$Var)))
+function $isArrayOf_Llambda_syntax_Program$Term$Var(obj, depth) {
+  return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Llambda_syntax_Program$Term$Var)))
 }
-function $asArrayOf_Llambda_syntax_Program$Expression$Var(obj, depth) {
-  return (($isArrayOf_Llambda_syntax_Program$Expression$Var(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Expression$Var;", depth))
+function $asArrayOf_Llambda_syntax_Program$Term$Var(obj, depth) {
+  return (($isArrayOf_Llambda_syntax_Program$Term$Var(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Llambda.syntax.Program$Term$Var;", depth))
 }
-var $d_Llambda_syntax_Program$Expression$Var = new $TypeData().initClass({
-  Llambda_syntax_Program$Expression$Var: 0
-}, false, "lambda.syntax.Program$Expression$Var", {
-  Llambda_syntax_Program$Expression$Var: 1,
-  Llambda_syntax_Program$Expression: 1,
+var $d_Llambda_syntax_Program$Term$Var = new $TypeData().initClass({
+  Llambda_syntax_Program$Term$Var: 0
+}, false, "lambda.syntax.Program$Term$Var", {
+  Llambda_syntax_Program$Term$Var: 1,
+  Llambda_syntax_Program$Term: 1,
   O: 1,
   s_Equals: 1,
   s_Product: 1,
   Ljava_io_Serializable: 1,
   s_reflect_Enum: 1
 });
-$c_Llambda_syntax_Program$Expression$Var.prototype.$classData = $d_Llambda_syntax_Program$Expression$Var;
+$c_Llambda_syntax_Program$Term$Var.prototype.$classData = $d_Llambda_syntax_Program$Term$Var;
 /** @constructor */
 function $c_s_None$() {
   /*<skip>*/
