@@ -1,6 +1,5 @@
 package lambda.frontend
 
-import caos.common.Example
 import caos.frontend.Configurator
 import caos.frontend.Configurator.*
 import caos.frontend.widgets.WidgetInfo
@@ -36,6 +35,7 @@ object CaosConfig extends Configurator[Term]:
   val widgets = List(
     "View parsed data" -> view(_.toString , Text),
     "View pretty data" -> view(Show.apply , Text),
+    "Diagram of structure" -> view(Show.mermaid, Mermaid),
     "Run semantics" -> steps(
       e=>e, Semantics, e => Show(e), Text),
     "Build LTS" -> lts(
