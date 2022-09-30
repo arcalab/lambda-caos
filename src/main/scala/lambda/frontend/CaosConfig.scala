@@ -34,15 +34,12 @@ object CaosConfig extends Configurator[Term]:
 
   val widgets = List(
     "View parsed data" -> view(_.toString , Text),
-    "View pretty data" -> view(Show.apply , Text),
-    "Diagram of structure" -> view(Show.mermaid, Mermaid),
-    "Run semantics" -> steps(
-      e=>e, Semantics, e => Show(e), Text),
-    "Build LTS" -> lts(
-      e=>e, Semantics, x=>Show(x)),
-    "Build LTS - Lazy Evaluation" -> lts(
-      e => e, LazySemantics, x => Show(x)),
-    "Build LTS - Strict Evaluation" -> lts(
-      e => e, StrictSemantics, x => Show(x)),
+    "View pretty data" -> view(Show.apply , Code("haskell")),
+    "Diagram of the structure" -> view(Show.mermaid, Mermaid),
+    "Run semantics" -> steps(e=>e, Semantics, e=>Show(e), Text),
+    "Run semantics (with diagrams)" -> steps(e=>e, Semantics, Show.mermaid, Mermaid),
+    "Build LTS" -> lts(e=>e, Semantics, x=>Show(x)),
+    "Build LTS - Lazy Evaluation" -> lts(e=>e, LazySemantics, x=>Show(x)),
+    "Build LTS - Strict Evaluation" -> lts(e=>e, StrictSemantics, x=>Show(x)),
 
   )

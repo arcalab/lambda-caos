@@ -1206,9 +1206,9 @@ $c_Lcaos_frontend_Site$.prototype.mkWidget__T2__F0__F0__Lcaos_frontend_widgets_O
       var x58 = x$1$2.Lcaos_frontend_widgets_WidgetInfo$Visualize__f_v;
       var x59 = x$1$2.Lcaos_frontend_widgets_WidgetInfo$Visualize__f_typ;
       var x60 = x$1$2.Lcaos_frontend_widgets_WidgetInfo$Visualize__f_pre;
-      if (false) {
+      if ((x59 instanceof $c_Lcaos_view_Code)) {
         var x$1$3 = $as_Lcaos_view_Code(x59);
-        var x63 = x$1$3._1__T();
+        var x63 = x$1$3.Lcaos_view_Code__f_lang;
         return new $c_Lcaos_frontend_widgets_VisualiseCode(new $c_sjsr_AnonFunction0(((this$3$1, get$4, view$6, pre$6) => (() => $as_Lcaos_view_View(view$6.apply__O__O(pre$6.apply__O__O(get$4.apply__O())))))(this, get, x58, x60)), $as_T(w._1__O()), x63, out)
       }
     };
@@ -1286,9 +1286,9 @@ $c_Lcaos_frontend_Site$.prototype.mkWidget__T2__F0__F0__Lcaos_frontend_widgets_O
       var x24 = x$1$9._2__Lcaos_view_ViewType();
       var x25 = x$1$9._3__F1();
       var x26 = x$1$9._4__F1();
-      if (false) {
+      if ((x24 instanceof $c_Lcaos_view_Code)) {
         var x$1$10 = $as_Lcaos_view_Code(x24);
-        var x29 = x$1$10._1__T();
+        var x29 = x$1$10.Lcaos_view_Code__f_lang;
         return new $c_Lcaos_frontend_widgets_Tabs(new $c_sjsr_AnonFunction0(((this$8$1, get$7, views$4, pre$15) => (() => $as_sci_List(views$4.apply__O__O(pre$15.apply__O__O(get$7.apply__O())))))(this, get, x23, x26)), $as_T(w._1__O()), new $c_sjsr_AnonFunction0(((this$9$1, get$8, titles$4, pre$16) => (() => $as_sci_List(titles$4.apply__O__O(pre$16.apply__O__O(get$8.apply__O())))))(this, get, x25, x26)), x29, out)
       }
     };
@@ -9268,6 +9268,51 @@ function $m_Llambda_syntax_Parser$() {
   };
   return $n_Llambda_syntax_Parser$
 }
+function $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T($thiz, e) {
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Var)) {
+    var x$1 = $as_Llambda_syntax_Program$Term$Var(e);
+    var x48 = x$1.Llambda_syntax_Program$Term$Var__f_x;
+    return (((("  " + e.hashCode__I()) + "([\"") + x48) + "\"])")
+  };
+  if ((e instanceof $c_Llambda_syntax_Program$Term$App)) {
+    var x$1$1 = $as_Llambda_syntax_Program$Term$App(e);
+    var x44 = x$1$1.Llambda_syntax_Program$Term$App__f_e1;
+    var x45 = x$1$1.Llambda_syntax_Program$Term$App__f_e2;
+    return ((((((((((((((("  " + e.hashCode__I()) + "([\"") + $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e)) + "\"])  \n") + $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T($thiz, x44)) + "\n") + $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T($thiz, x45)) + "\n  ") + e.hashCode__I()) + " -->|app-left| ") + x44.hashCode__I()) + "\n  ") + e.hashCode__I()) + " -->|app-right| ") + x45.hashCode__I())
+  };
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Lam)) {
+    var x$1$2 = $as_Llambda_syntax_Program$Term$Lam(e);
+    var x40 = x$1$2.Llambda_syntax_Program$Term$Lam__f_x;
+    var x41 = x$1$2.Llambda_syntax_Program$Term$Lam__f_e;
+    var $$x5 = e.hashCode__I();
+    var $$x4 = $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e);
+    var $$x3 = $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T($thiz, new $c_Llambda_syntax_Program$Term$Var(x40));
+    var $$x2 = $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T($thiz, x41);
+    var $$x1 = e.hashCode__I();
+    var this$6 = new $c_Llambda_syntax_Program$Term$Var(x40);
+    var this$8 = $m_s_util_hashing_MurmurHash3$();
+    return ((((((((((((((("  " + $$x5) + "([\"") + $$x4) + "\"])  \n") + $$x3) + "\n") + $$x2) + "\n  ") + $$x1) + " -->|lam-var| ") + this$8.productHash__s_Product__I__Z__I(this$6, (-889275714), false)) + "\n  ") + e.hashCode__I()) + " -->|lam-term| ") + x41.hashCode__I())
+  };
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Val)) {
+    var x$1$3 = $as_Llambda_syntax_Program$Term$Val(e);
+    var x37 = x$1$3.Llambda_syntax_Program$Term$Val__f_n;
+    return (((("  " + e.hashCode__I()) + "([\"") + x37) + "\"])")
+  };
+  if ((e instanceof $c_Llambda_syntax_Program$Term$Add)) {
+    var x$1$4 = $as_Llambda_syntax_Program$Term$Add(e);
+    var x33 = x$1$4.Llambda_syntax_Program$Term$Add__f_e1;
+    var x34 = x$1$4.Llambda_syntax_Program$Term$Add__f_e2;
+    return ((((((((((((((("  " + e.hashCode__I()) + "([\"") + $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e)) + "\"])  \n") + $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T($thiz, x33)) + "\n") + $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T($thiz, x34)) + "\n  ") + e.hashCode__I()) + " -->|+left| ") + x33.hashCode__I()) + "\n  ") + e.hashCode__I()) + " -->|+right| ") + x34.hashCode__I())
+  };
+  if ((e instanceof $c_Llambda_syntax_Program$Term$If0)) {
+    var x$1$5 = $as_Llambda_syntax_Program$Term$If0(e);
+    var x28 = x$1$5.Llambda_syntax_Program$Term$If0__f_e1;
+    var x29 = x$1$5.Llambda_syntax_Program$Term$If0__f_e2;
+    var x30 = x$1$5.Llambda_syntax_Program$Term$If0__f_e3;
+    return ((((((((((((((((((((("  " + e.hashCode__I()) + "([\"") + $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e)) + "\"])  \n") + $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T($thiz, x28)) + "\n") + $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T($thiz, x29)) + "\n") + $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T($thiz, x30)) + "\n  ") + e.hashCode__I()) + " -->|if-cond| ") + x28.hashCode__I()) + "\n  ") + e.hashCode__I()) + " -->|if-true| ") + x29.hashCode__I()) + "\n  ") + e.hashCode__I()) + " -->|if-false| ") + x30.hashCode__I())
+  };
+  throw new $c_s_MatchError(e)
+}
 /** @constructor */
 function $c_Llambda_syntax_Show$() {
   /*<skip>*/
@@ -9318,52 +9363,7 @@ $c_Llambda_syntax_Show$.prototype.apply__Llambda_syntax_Program$Term__T = (funct
   throw new $c_s_MatchError(e)
 });
 $c_Llambda_syntax_Show$.prototype.mermaid__Llambda_syntax_Program$Term__T = (function(e) {
-  return ("graph TD\n" + this.term2merm__Llambda_syntax_Program$Term__T(e))
-});
-$c_Llambda_syntax_Show$.prototype.term2merm__Llambda_syntax_Program$Term__T = (function(e) {
-  if ((e instanceof $c_Llambda_syntax_Program$Term$Var)) {
-    var x$1 = $as_Llambda_syntax_Program$Term$Var(e);
-    var x48 = x$1.Llambda_syntax_Program$Term$Var__f_x;
-    return (((("  " + e.hashCode__I()) + "([\"") + x48) + "\"])")
-  };
-  if ((e instanceof $c_Llambda_syntax_Program$Term$App)) {
-    var x$1$1 = $as_Llambda_syntax_Program$Term$App(e);
-    var x44 = x$1$1.Llambda_syntax_Program$Term$App__f_e1;
-    var x45 = x$1$1.Llambda_syntax_Program$Term$App__f_e2;
-    return ((((((((((((((("  " + e.hashCode__I()) + "([\"") + $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e)) + "\"])  \n") + this.term2merm__Llambda_syntax_Program$Term__T(x44)) + "\n") + this.term2merm__Llambda_syntax_Program$Term__T(x45)) + "\n  ") + e.hashCode__I()) + " -->|app-left| ") + x44.hashCode__I()) + "\n  ") + e.hashCode__I()) + " -->|app-right| ") + x45.hashCode__I())
-  };
-  if ((e instanceof $c_Llambda_syntax_Program$Term$Lam)) {
-    var x$1$2 = $as_Llambda_syntax_Program$Term$Lam(e);
-    var x40 = x$1$2.Llambda_syntax_Program$Term$Lam__f_x;
-    var x41 = x$1$2.Llambda_syntax_Program$Term$Lam__f_e;
-    var $$x5 = e.hashCode__I();
-    var $$x4 = $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e);
-    var $$x3 = this.term2merm__Llambda_syntax_Program$Term__T(new $c_Llambda_syntax_Program$Term$Var(x40));
-    var $$x2 = this.term2merm__Llambda_syntax_Program$Term__T(x41);
-    var $$x1 = e.hashCode__I();
-    var this$6 = new $c_Llambda_syntax_Program$Term$Var(x40);
-    var this$8 = $m_s_util_hashing_MurmurHash3$();
-    return ((((((((((((((("  " + $$x5) + "([\"") + $$x4) + "\"])  \n") + $$x3) + "\n") + $$x2) + "\n  ") + $$x1) + " -->|lam-var| ") + this$8.productHash__s_Product__I__Z__I(this$6, (-889275714), false)) + "\n  ") + e.hashCode__I()) + " -->|lam-term| ") + x41.hashCode__I())
-  };
-  if ((e instanceof $c_Llambda_syntax_Program$Term$Val)) {
-    var x$1$3 = $as_Llambda_syntax_Program$Term$Val(e);
-    var x37 = x$1$3.Llambda_syntax_Program$Term$Val__f_n;
-    return (((("  " + e.hashCode__I()) + "([\"") + x37) + "\"])")
-  };
-  if ((e instanceof $c_Llambda_syntax_Program$Term$Add)) {
-    var x$1$4 = $as_Llambda_syntax_Program$Term$Add(e);
-    var x33 = x$1$4.Llambda_syntax_Program$Term$Add__f_e1;
-    var x34 = x$1$4.Llambda_syntax_Program$Term$Add__f_e2;
-    return ((((((((((((((("  " + e.hashCode__I()) + "([\"") + $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e)) + "\"])  \n") + this.term2merm__Llambda_syntax_Program$Term__T(x33)) + "\n") + this.term2merm__Llambda_syntax_Program$Term__T(x34)) + "\n  ") + e.hashCode__I()) + " -->|+left| ") + x33.hashCode__I()) + "\n  ") + e.hashCode__I()) + " -->|+right| ") + x34.hashCode__I())
-  };
-  if ((e instanceof $c_Llambda_syntax_Program$Term$If0)) {
-    var x$1$5 = $as_Llambda_syntax_Program$Term$If0(e);
-    var x28 = x$1$5.Llambda_syntax_Program$Term$If0__f_e1;
-    var x29 = x$1$5.Llambda_syntax_Program$Term$If0__f_e2;
-    var x30 = x$1$5.Llambda_syntax_Program$Term$If0__f_e3;
-    return ((((((((((((((((((((("  " + e.hashCode__I()) + "([\"") + $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e)) + "\"])  \n") + this.term2merm__Llambda_syntax_Program$Term__T(x28)) + "\n") + this.term2merm__Llambda_syntax_Program$Term__T(x29)) + "\n") + this.term2merm__Llambda_syntax_Program$Term__T(x30)) + "\n  ") + e.hashCode__I()) + " -->|if-cond| ") + x28.hashCode__I()) + "\n  ") + e.hashCode__I()) + " -->|if-true| ") + x29.hashCode__I()) + "\n  ") + e.hashCode__I()) + " -->|if-false| ") + x30.hashCode__I())
-  };
-  throw new $c_s_MatchError(e)
+  return ("graph TD\n" + $p_Llambda_syntax_Show$__term2merm__Llambda_syntax_Program$Term__T(this, e))
 });
 var $d_Llambda_syntax_Show$ = new $TypeData().initClass({
   Llambda_syntax_Show$: 0
@@ -15247,7 +15247,7 @@ $c_Lcaos_frontend_widgets_SimulateMermaid.prototype.updateSimulationSteps__sci_L
 });
 $c_Lcaos_frontend_widgets_SimulateMermaid.prototype.showSt__O__V = (function(st) {
   try {
-    var mermaid = $as_Lcaos_view_View(this.Lcaos_frontend_widgets_SimulateMermaid__f_simulate.Lcaos_frontend_widgets_WidgetInfo$Simulate__f_v.apply__O__O(st)).Lcaos_view_View__f_code;
+    var mermaid = $f_T__replaceAll__T__T__T($as_Lcaos_view_View(this.Lcaos_frontend_widgets_SimulateMermaid__f_simulate.Lcaos_frontend_widgets_WidgetInfo$Simulate__f_v.apply__O__O(st)).Lcaos_view_View__f_code, "\\\\", "\\\\\\\\");
     var mermaidJs = $m_Lcaos_frontend_widgets_MermaidJS$().apply__T__T__T__T(mermaid, this.Lcaos_frontend_widgets_SimulateMermaid__f_divBox, this.Lcaos_frontend_widgets_SimulateMermaid__f_svgBox);
     (0, eval)(mermaidJs)
   } catch (e) {
@@ -18537,22 +18537,22 @@ function $c_Llambda_frontend_CaosConfig$() {
   var elems = $m_sr_ScalaRunTime$().wrapRefArray__AO__sci_ArraySeq(new ($d_Lcaos_frontend_Configurator$Example.getArrayOf().constr)([new $c_Lcaos_frontend_Configurator$Example("(\\x -> x + 1) 2", "succ", "Adds 1 to number 2"), new $c_Lcaos_frontend_Configurator$Example("(\\x -> x x) (\\y -> y y)", "omega", "infinite beta reductions"), new $c_Lcaos_frontend_Configurator$Example("((\\x -> x + 1) 2) \n+ \n((\\y -> y + 1) 3)", "non-determ", "non-determinism when evaluating term"), new $c_Lcaos_frontend_Configurator$Example("(\\n -> if0 n 1\n   ((\\x -> (x x)) (\\x -> (x x)))\n) (2+2)", "if0", "Example with infinite beta reductions inside a reduceable term, borrowed from https://redex.racket-lang.org/lam-v.html."), new $c_Lcaos_frontend_Configurator$Example("((\\le -> \n   ((\\f -> (le (\\x -> ((f f) x))))\n    (\\f -> (le (\\x -> ((f f) x))))))\n (\\triangle ->\n   (\\x ->\n     (if0 x\n          0\n          (x + (triangle (x + (-1))))))))", "triangle", "Triangle example taken from the SEwPR book - https://redex.racket-lang.org/lam-v.html")]));
   this.Llambda_frontend_CaosConfig$__f_examples = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
   $m_s_package$();
-  var $$x7 = $m_sr_ScalaRunTime$();
+  var $$x8 = $m_sr_ScalaRunTime$();
   var y = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$2$1) => ((_$1) => {
     var _$1$1 = $as_Llambda_syntax_Program$Term(_$1);
     return _$1$1.toString__T()
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x6 = new $c_T2("View parsed data", y);
+  var $$x7 = new $c_T2("View parsed data", y);
   var y$1 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$3$1) => ((e) => {
     var e$1 = $as_Llambda_syntax_Program$Term(e);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e$1)
-  }))(this)), $m_Lcaos_view_Text$());
-  var $$x5 = new $c_T2("View pretty data", y$1);
+  }))(this)), new $c_Lcaos_view_Code("haskell"));
+  var $$x6 = new $c_T2("View pretty data", y$1);
   var y$2 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$4$1) => ((e$2) => {
     var e$3 = $as_Llambda_syntax_Program$Term(e$2);
     return $m_Llambda_syntax_Show$().mermaid__Llambda_syntax_Program$Term__T(e$3)
   }))(this)), $m_Lcaos_view_Mermaid$());
-  var $$x4 = new $c_T2("Diagram of structure", y$2);
+  var $$x5 = new $c_T2("Diagram of the structure", y$2);
   var y$3 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$5$1) => ((e$3$1) => {
     var e$4 = $as_Llambda_syntax_Program$Term(e$3$1);
     return e$4
@@ -18560,31 +18560,39 @@ function $c_Llambda_frontend_CaosConfig$() {
     var e$5 = $as_Llambda_syntax_Program$Term(e$4$1);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(e$5)
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x3 = new $c_T2("Run semantics", y$3);
-  var y$4 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$7$1) => ((e$5$1) => {
+  var $$x4 = new $c_T2("Run semantics", y$3);
+  var y$4 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$7$1) => ((e$5$1) => {
     var e$6 = $as_Llambda_syntax_Program$Term(e$5$1);
     return e$6
-  }))(this)), $m_Llambda_backend_Semantics$(), new $c_sjsr_AnonFunction1(((this$8$1) => ((x) => {
+  }))(this)), $m_Llambda_backend_Semantics$(), new $c_sjsr_AnonFunction1(((this$8$1) => ((e$6$1) => {
+    var e$7 = $as_Llambda_syntax_Program$Term(e$6$1);
+    return $m_Llambda_syntax_Show$().mermaid__Llambda_syntax_Program$Term__T(e$7)
+  }))(this)), $m_Lcaos_view_Mermaid$());
+  var $$x3 = new $c_T2("Run semantics (with diagrams)", y$4);
+  var y$5 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$9$1) => ((e$7$1) => {
+    var e$8 = $as_Llambda_syntax_Program$Term(e$7$1);
+    return e$8
+  }))(this)), $m_Llambda_backend_Semantics$(), new $c_sjsr_AnonFunction1(((this$10$1) => ((x) => {
     var x$1 = $as_Llambda_syntax_Program$Term(x);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(x$1)
   }))(this)), $m_Lcaos_frontend_Configurator$().lts$default$4__F1(), 80);
-  var $$x2 = new $c_T2("Build LTS", y$4);
-  var y$5 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$9$1) => ((e$6$1) => {
-    var e$7 = $as_Llambda_syntax_Program$Term(e$6$1);
-    return e$7
-  }))(this)), $m_Llambda_backend_LazySemantics$(), new $c_sjsr_AnonFunction1(((this$10$1) => ((x$2) => {
+  var $$x2 = new $c_T2("Build LTS", y$5);
+  var y$6 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$11$1) => ((e$8$1) => {
+    var e$9 = $as_Llambda_syntax_Program$Term(e$8$1);
+    return e$9
+  }))(this)), $m_Llambda_backend_LazySemantics$(), new $c_sjsr_AnonFunction1(((this$12$1) => ((x$2) => {
     var x$3 = $as_Llambda_syntax_Program$Term(x$2);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(x$3)
   }))(this)), $m_Lcaos_frontend_Configurator$().lts$default$4__F1(), 80);
-  var $$x1 = new $c_T2("Build LTS - Lazy Evaluation", y$5);
-  var y$6 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$11$1) => ((e$7$1) => {
-    var e$8 = $as_Llambda_syntax_Program$Term(e$7$1);
-    return e$8
-  }))(this)), $m_Llambda_backend_StrictSemantics$(), new $c_sjsr_AnonFunction1(((this$12$1) => ((x$3$1) => {
+  var $$x1 = new $c_T2("Build LTS - Lazy Evaluation", y$6);
+  var y$7 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$13$1) => ((e$9$1) => {
+    var e$10 = $as_Llambda_syntax_Program$Term(e$9$1);
+    return e$10
+  }))(this)), $m_Llambda_backend_StrictSemantics$(), new $c_sjsr_AnonFunction1(((this$14$1) => ((x$3$1) => {
     var x$4 = $as_Llambda_syntax_Program$Term(x$3$1);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(x$4)
   }))(this)), $m_Lcaos_frontend_Configurator$().lts$default$4__F1(), 80);
-  var elems$1 = $$x7.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_T2("Build LTS - Strict Evaluation", y$6)]));
+  var elems$1 = $$x8.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x7, $$x6, $$x5, $$x4, $$x3, $$x2, $$x1, new $c_T2("Build LTS - Strict Evaluation", y$7)]));
   this.Llambda_frontend_CaosConfig$__f_widgets = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$1)
 }
 $c_Llambda_frontend_CaosConfig$.prototype = new $h_O();
@@ -28396,7 +28404,7 @@ $c_Lcaos_frontend_widgets_WidgetInfo$Simulate.prototype.equals__O__Z = (function
     if ($$x2) {
       var x$5 = this.Lcaos_frontend_widgets_WidgetInfo$Simulate__f_typ;
       var x$6 = x$0$2.Lcaos_frontend_widgets_WidgetInfo$Simulate__f_typ;
-      var $$x1 = (x$5 === x$6)
+      var $$x1 = ((x$5 === null) ? (x$6 === null) : x$5.equals__O__Z(x$6))
     } else {
       var $$x1 = false
     };
@@ -28496,7 +28504,7 @@ $c_Lcaos_frontend_widgets_WidgetInfo$Visualize.prototype.equals__O__Z = (functio
     if (((x === null) ? (x$2 === null) : x.equals__O__Z(x$2))) {
       var x$3 = this.Lcaos_frontend_widgets_WidgetInfo$Visualize__f_typ;
       var x$4 = x$0$2.Lcaos_frontend_widgets_WidgetInfo$Visualize__f_typ;
-      var $$x1 = (x$3 === x$4)
+      var $$x1 = ((x$3 === null) ? (x$4 === null) : x$3.equals__O__Z(x$4))
     } else {
       var $$x1 = false
     };
@@ -28586,8 +28594,52 @@ function $isArrayOf_Lcaos_frontend_widgets_WidgetInfo$VisualizeTab(obj, depth) {
 function $asArrayOf_Lcaos_frontend_widgets_WidgetInfo$VisualizeTab(obj, depth) {
   return (($isArrayOf_Lcaos_frontend_widgets_WidgetInfo$VisualizeTab(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcaos.frontend.widgets.WidgetInfo$VisualizeTab;", depth))
 }
+/** @constructor */
+function $c_Lcaos_view_Code(lang) {
+  this.Lcaos_view_Code__f_lang = null;
+  this.Lcaos_view_Code__f_lang = lang
+}
+$c_Lcaos_view_Code.prototype = new $h_Lcaos_view_ViewType();
+$c_Lcaos_view_Code.prototype.constructor = $c_Lcaos_view_Code;
+/** @constructor */
+function $h_Lcaos_view_Code() {
+  /*<skip>*/
+}
+$h_Lcaos_view_Code.prototype = $c_Lcaos_view_Code.prototype;
+$c_Lcaos_view_Code.prototype.productIterator__sc_Iterator = (function() {
+  return new $c_s_Product$$anon$1(this)
+});
+$c_Lcaos_view_Code.prototype.hashCode__I = (function() {
+  var this$2 = $m_s_util_hashing_MurmurHash3$();
+  return this$2.productHash__s_Product__I__Z__I(this, (-889275714), false)
+});
+$c_Lcaos_view_Code.prototype.equals__O__Z = (function(x$0) {
+  if ((this === x$0)) {
+    return true
+  } else if ((x$0 instanceof $c_Lcaos_view_Code)) {
+    var x$0$2 = $as_Lcaos_view_Code(x$0);
+    return (this.Lcaos_view_Code__f_lang === x$0$2.Lcaos_view_Code__f_lang)
+  } else {
+    return false
+  }
+});
+$c_Lcaos_view_Code.prototype.toString__T = (function() {
+  return $m_sr_ScalaRunTime$()._toString__s_Product__T(this)
+});
+$c_Lcaos_view_Code.prototype.productArity__I = (function() {
+  return 1
+});
+$c_Lcaos_view_Code.prototype.productPrefix__T = (function() {
+  return "Code"
+});
+$c_Lcaos_view_Code.prototype.productElement__I__O = (function(n) {
+  if ((n === 0)) {
+    return this.Lcaos_view_Code__f_lang
+  };
+  throw $ct_jl_IndexOutOfBoundsException__T__(new $c_jl_IndexOutOfBoundsException(), ("" + n))
+});
 function $as_Lcaos_view_Code(obj) {
-  return ((false || (obj === null)) ? obj : $throwClassCastException(obj, "caos.view.Code"))
+  return (((obj instanceof $c_Lcaos_view_Code) || (obj === null)) ? obj : $throwClassCastException(obj, "caos.view.Code"))
 }
 function $isArrayOf_Lcaos_view_Code(obj, depth) {
   return (!(!(((obj && obj.$classData) && (obj.$classData.arrayDepth === depth)) && obj.$classData.arrayBase.ancestors.Lcaos_view_Code)))
@@ -28595,6 +28647,17 @@ function $isArrayOf_Lcaos_view_Code(obj, depth) {
 function $asArrayOf_Lcaos_view_Code(obj, depth) {
   return (($isArrayOf_Lcaos_view_Code(obj, depth) || (obj === null)) ? obj : $throwArrayCastException(obj, "Lcaos.view.Code;", depth))
 }
+var $d_Lcaos_view_Code = new $TypeData().initClass({
+  Lcaos_view_Code: 0
+}, false, "caos.view.Code", {
+  Lcaos_view_Code: 1,
+  Lcaos_view_ViewType: 1,
+  O: 1,
+  s_Equals: 1,
+  s_Product: 1,
+  Ljava_io_Serializable: 1
+});
+$c_Lcaos_view_Code.prototype.$classData = $d_Lcaos_view_Code;
 /** @constructor */
 function $c_Lcats_Show$() {
   this.Lcats_Show$__f_catsContravariantForShow = null;
