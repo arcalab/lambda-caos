@@ -1,6 +1,6 @@
 # Lambda Calculus with additions 
 
-Simple lambda-calculus language to illustrate how the CAOS library can be used to animate reduction steps.
+Simple lambda-calculus language to illustrate how the CAOS library can be used to animate reduction steps, inspired by an example for PLT Redex's domain-specific language embedded in Racket for specifying and debugging operational semantics (https://redex.racket-lang.org/lam-v.html).
 
 
 ## Requirements
