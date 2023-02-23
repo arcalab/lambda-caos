@@ -15,8 +15,8 @@ object Semantics extends SOS[String,St]:
   override def accepting(s: St): Boolean = false
 
   /** What are the set of possible evolutions (label and new state) */
-  override def next(st: St): Set[(String, St)] = st match
-    case Var(x) => Set() // cannot evolve
+  def next[A>:String](st: St): Set[(A, St)] = st match
+    case Var(_) => Set() // cannot evolve
     case App(e1, e2) => // evolve by e1, by e2, or by a beta reduction
       (for (by, to) <- next(e1) yield by -> App(to, e2)) ++
       (for (by, to) <- next(e2) yield by -> App(e1, to)) ++
@@ -48,8 +48,8 @@ object Semantics extends SOS[String,St]:
   def subst(e:Term, x:String, by:Term): Term = e match
       case Var(x2) => if x==x2 then by else e
       case App(e1, e2) => App(subst(e1,x,by),subst(e2,x,by))
-      case Lam(x2, e1) => if (x==x2) then e else Lam(x2,subst(e1,x,by))
-      case Val(n) => e
+      case Lam(x2, e1) => if x==x2 then e else Lam(x2,subst(e1,x,by))
+      case Val(_) => e
       case Add(e1, e2) => Add(subst(e1,x,by),subst(e2,x,by))
       case If0(e1,e2,e3) => If0(subst(e1,x,by),subst(e2,x,by),subst(e3,x,by))
 

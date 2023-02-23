@@ -1,19 +1,17 @@
 package lambda.frontend
 
 import caos.frontend.Configurator
-import caos.frontend.Configurator.*
-import caos.frontend.widgets.WidgetInfo
-import caos.view.{Mermaid, Text, View, Code}
+import Configurator.*
+import caos.view.{Code, Mermaid, Text}
 import lambda.backend.*
-import lambda.syntax.Program.Term
 import lambda.syntax.{Program, Show}
 
 /** Object used to configure which analysis appear in the browser */
-object CaosConfig extends Configurator[Term]:
+object CaosConfig extends Configurator[Program.Term]:
   val name = "Animator of a simple lambda calculus language"
   override val languageName: String = "Lambda Calculus with addition"
 
-  val parser: String=>Term =
+  val parser =
     lambda.syntax.Parser.parseProgram
 
   val examples = List(
@@ -32,14 +30,14 @@ object CaosConfig extends Configurator[Term]:
       "Triangle example taken from the SEwPR book - https://redex.racket-lang.org/lam-v.html"
   )
 
+
   val widgets = List(
-    "View parsed data" -> view(_.toString , Text),
-    "View pretty data" -> view(Show.apply , Code("haskell")),
-    "Diagram of the structure" -> view(Show.mermaid, Mermaid),
+    "View parsed data" -> view(_.toString, Text).moveTo(1),
+    "View pretty data" -> view(Show.apply, Code("haskell")).moveTo(1),
+    "Diagram of the structure" -> view(Show.mermaid, Mermaid).moveTo(1),
     "Run semantics" -> steps(e=>e, Semantics, e=>Show(e), Text),
     "Run semantics (with diagrams)" -> steps(e=>e, Semantics, Show.mermaid, Mermaid),
     "Build LTS" -> lts(e=>e, Semantics, x=>Show(x)),
     "Build LTS - Lazy Evaluation" -> lts(e=>e, LazySemantics, x=>Show(x)),
     "Build LTS - Strict Evaluation" -> lts(e=>e, StrictSemantics, x=>Show(x)),
-
   )

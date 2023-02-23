@@ -15,7 +15,7 @@ object StrictSemantics extends SOS[String,St]:
   override def accepting(s: St): Boolean = false
 
   /** What are the set of possible evolutions (label and new state) */
-  override def next(st: St): Set[(String, St)] = st match
+  override def next[A>:String](st: St): Set[(A, St)] = st match
     case Var(_) => Set() // cannot evolve
     case App(e1, e2) => // evolve by e2, if fail try to evolve by e1, if fail, check for a beta reduction
       val e2N = next(e2)
