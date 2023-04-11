@@ -15,14 +15,15 @@ object LazySemantics extends SOS[String,St]:
   override def accepting(s: St): Boolean = false
 
   /** What are the set of possible evolutions (label and new state) */
-  override def next[A>:String](st: St): Set[(A, St)] = st match
+  def next[A>:String](st: St): Set[(A, St)] = st match
     case Var(_) => Set() // cannot evolve
     case App(Lam(x,e1),e2) => Set(s"beta-$x" -> Semantics.subst(e1,x,e2)) // apply a lambda once it can
     case App(e1, e2) => // evolve by e1, if fail try to evolve by e2
-      val e1N = next(e1)
-      if e1N.nonEmpty
-      then Set(e1N.head._1 -> App(e1N.head._2,e2))
-      else for (by, to) <- next(e2) yield by -> App(e1, to)
+      next(e1).headOption match 
+        case Some(head) =>
+          Set(head._1 -> App(head._2,e2))
+        case None =>
+          for (by, to) <- next(e2) yield by -> App(e1, to)
     case Lam(x, e) => // evolve by e
       for (by, to) <- next(e) yield by -> Lam(x, to)
     case Val(_) => Set()
