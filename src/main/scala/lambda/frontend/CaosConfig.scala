@@ -5,9 +5,10 @@ import Configurator.*
 import caos.view.{Code, Mermaid, Text}
 import lambda.backend.*
 import lambda.syntax.{Program, Show}
+import Program.Term
 
 /** Object used to configure which analysis appear in the browser */
-object CaosConfig extends Configurator[Program.Term]:
+object CaosConfig extends Configurator[Term]:
   val name = "Animator of a simple lambda calculus language"
   override val languageName: String = "Lambda Calculus with addition"
 
@@ -27,7 +28,10 @@ object CaosConfig extends Configurator[Program.Term]:
       "Example with infinite beta reductions inside a reduceable term, borrowed from https://redex.racket-lang.org/lam-v.html.",
     "triangle" ->
       "((\\le -> \n   ((\\f -> (le (\\x -> ((f f) x))))\n    (\\f -> (le (\\x -> ((f f) x))))))\n (\\triangle ->\n   (\\x ->\n     (if0 x\n          0\n          (x + (triangle (x + (-1))))))))" ->
-      "Triangle example taken from the SEwPR book - https://redex.racket-lang.org/lam-v.html"
+      "Triangle example taken from the SEwPR book - https://redex.racket-lang.org/lam-v.html",
+    "find-bisim" ->
+      "((\\y->y y) ((\\x -> x + 1) 2))\n// is bisimlar to\n((\\y->y y) ((\\x -> 5 + x) 27))" ->
+      "Simple example to verify if two terms are bisimilar"
   )
 
 
@@ -40,4 +44,10 @@ object CaosConfig extends Configurator[Program.Term]:
     "Build LTS" -> lts(e=>e, Semantics, x=>Show(x)),
     "Build LTS - Lazy Evaluation" -> lts(e=>e, LazySemantics, x=>Show(x)),
     "Build LTS - Strict Evaluation" -> lts(e=>e, StrictSemantics, x=>Show(x)),
+    "Find bisimulation: given 'A B', check if 'A ~ B'" ->
+      compareBranchBisim(Semantics,Semantics,getPair(_)._1,getPair(_)._2,show1=Show.apply,show2=Show.apply),
   )
+
+  def getPair(t:Term): (Term,Term) = t match
+    case Term.App(t1,t2) => (t1,t2)
+    case _ => sys.error("Input must be an application \"A B\" to compare \"A\" and \"B\".")

@@ -13,11 +13,15 @@ object Show:
   /** Pretty expression */
   def apply(e: Term): String = e match
     case Var(x) => x
-    case App(e1, e2) => s"(${apply(e1)}) (${apply(e2)})"
+    case App(e1, e2) => s"${applyP(e1)} ${applyP(e2)}"
     case Lam(x, e) => s"\\$x -> ${apply(e)}"
     case Val(n) => n.toString
-    case Add(e1, e2) => s"(${apply(e1)}) + (${apply(e2)})"
-    case If0(e1,e2,e3) => s"if (${apply(e1)})==0 then (${apply(e2)}) else (${apply(e3)})"
+    case Add(e1, e2) => s"${applyP(e1)} + ${applyP(e2)}"
+    case If0(e1,e2,e3) => s"if ${applyP(e1)}==0 then ${applyP(e2)} else ${applyP(e3)}"
+
+  private def applyP(e: Term): String = e match
+    case _:(Var|Val) => apply(e)
+    case _ => s"(${apply(e)})"
 
   /** Converts a lambda term into a mermaid diagram reflecting its structure. */
   def mermaid(e:Term): String = "graph TD\n"+term2merm(e)
