@@ -37,17 +37,17 @@ object CaosConfig extends Configurator[Term]:
 
   val widgets = List(
     "View parsed data" -> view(_.toString, Text).moveTo(1),
-    "View pretty data" -> view(Show.apply, Code("haskell")).moveTo(1),
+    "View pretty data" -> view(Show(_), Code("haskell")).moveTo(1),
     "Diagram of the structure" -> view(Show.mermaid, Mermaid).moveTo(1),
-    "Run semantics" -> steps(e=>e, Semantics, e=>Show(e), Text),
+    "Run semantics" -> steps(e=>e, Semantics, Show(_), Text),
     "Run semantics (with diagrams)" -> steps(e=>e, Semantics, Show.mermaid, Mermaid),
-    "Build LTS" -> lts(e=>e, Semantics, x=>Show(x)),
-    "Build LTS - Lazy Evaluation" -> lts(e=>e, LazySemantics, x=>Show(x)),
-    "Build LTS - Strict Evaluation" -> lts(e=>e, StrictSemantics, x=>Show(x)),
+    "Build LTS" -> lts(e=>e, Semantics, Show(_)),
+    "Build LTS - Lazy Evaluation" -> lts(e=>e, LazySemantics, Show(_)),
+    "Build LTS - Strict Evaluation" -> lts(e=>e, StrictSemantics, Show(_)),
     "Find bisimulation: given 'A B', check if 'A ~ B'" ->
-      compareBranchBisim(Semantics,Semantics,getPair(_)._1,getPair(_)._2,show1=Show.apply,show2=Show.apply),
+      compareBranchBisim(Semantics,Semantics,getApp(_).e1,getApp(_).e2,Show(_),Show(_)),
   )
 
-  def getPair(t:Term): (Term,Term) = t match
-    case Term.App(t1,t2) => (t1,t2)
+  def getApp(t:Term): Term.App = t match
+    case a:Term.App => a
     case _ => sys.error("Input must be an application \"A B\" to compare \"A\" and \"B\".")
