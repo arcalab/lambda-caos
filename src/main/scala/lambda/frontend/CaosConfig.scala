@@ -34,7 +34,7 @@ object CaosConfig extends Configurator[Term]:
       "Simple example to verify if two terms are bisimilar"
   )
 
-
+  /** Description of the widgets that appear in the dashboard. */
   val widgets = List(
     "View parsed data" -> view(_.toString, Text).moveTo(1),
     "View pretty data" -> view(Show(_), Code("haskell")).moveTo(1),
@@ -42,12 +42,47 @@ object CaosConfig extends Configurator[Term]:
     "Run semantics" -> steps(e=>e, Semantics, Show(_), Text),
     "Run semantics (with diagrams)" -> steps(e=>e, Semantics, Show.mermaid, Mermaid),
     "Build LTS" -> lts(e=>e, Semantics, Show(_)),
+    "Build LTS (explore)" -> ltsExplore(e=>e, Semantics, Show(_)),
     "Build LTS - Lazy Evaluation" -> lts(e=>e, LazySemantics, Show(_)),
     "Build LTS - Strict Evaluation" -> lts(e=>e, StrictSemantics, Show(_)),
     "Find bisimulation: given 'A B', check if 'A ~ B'" ->
       compareBranchBisim(Semantics,Semantics,getApp(_).e1,getApp(_).e2,Show(_),Show(_)),
   )
 
-  def getApp(t:Term): Term.App = t match
-    case a:Term.App => a
+  /** Auxiliar function that casts a generic term into a Term.App */
+  def getApp(t: Term): Term.App = t match
+    case a: Term.App => a
     case _ => sys.error("Input must be an application \"A B\" to compare \"A\" and \"B\".")
+
+  /** Custom footer message */
+  override val footer =
+    """Source code at: <a href="https://github.com/arcalab/lambda-caos" target="#">https://github.com/arcalab/lambda-caos</a>.
+      |This is minimal example to illustrate how to use the
+      |<a target="_blank" href="https://github.com/arcalab/CAOS">CAOS</a>
+      |libraries to generate a web frontend.""".stripMargin
+
+  override val documentation = List(
+    languageName
+      -> "Press to read more about the input language." ->
+      """The input language is a simple lambda term, borrowed from
+        |<a target="_blank" href="https://redex.racket-lang.org/lam-v.html">
+        |https://redex.racket-lang.org/lam-v.html</a> for Racket,
+        |given by the following grammar:
+        |<pre>
+        |  term ::= variable
+        |         | term term
+        |         | \ variable -> term
+        |         | integer
+        |         | term + term
+        |         | if0 term term term
+        |</pre>""".stripMargin,
+    "Run semantics"
+      -> "Press to read more about the semantics of the language." ->
+      """<p>The semantics of this lambda calculus is the traditional one,
+        | allowing alpha-reductions and beta-reductions to any of its sub-terms,
+        | enriched with rules to reduce the sum of two integers and to check if
+        | a given term is the integer value 0.</p>
+        |<p>Semantics borrowed from
+        |<a target="_blank" href="https://redex.racket-lang.org/lam-v.html">
+        |https://redex.racket-lang.org/lam-v.html</a> for Racket</p>""".stripMargin,
+  )
