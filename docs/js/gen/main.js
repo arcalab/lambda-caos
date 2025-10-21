@@ -19853,7 +19853,7 @@ function $c_Llambda_frontend_CaosConfig$() {
   var self = new $c_T2("succ", "(\\x -> x + 1) 2");
   var $$x12 = $$x13.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self, "Adds 1 to number 2"));
   var $$x11 = $m_Lcaos_frontend_Configurator$();
-  var self$1 = new $c_T2("inf-strict", "((\\x -> \\y -> y)\\n  ((\\x -> x x) (\\x -> x x)))\n  1");
+  var self$1 = new $c_T2("inf-strict", "((\\x -> \\y -> y)\n  ((\\x -> x x) (\\x -> x x)))\n  1");
   var $$x10 = $$x11.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$1, "Example that never terminates with a strict evaluation, but terminates with lazy evaluation."));
   var $$x9 = $m_Lcaos_frontend_Configurator$();
   var self$2 = new $c_T2("omega", "(\\x -> x x) (\\y -> y y)");
