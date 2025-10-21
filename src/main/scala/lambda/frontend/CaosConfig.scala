@@ -19,6 +19,9 @@ object CaosConfig extends Configurator[Term]:
     "succ" ->
       "(\\x -> x + 1) 2" ->
       "Adds 1 to number 2",
+    "inf-strict" ->
+      "((\\x -> \\y -> y)\\n  ((\\x -> x x) (\\x -> x x)))\n  1" ->
+      "Example that never terminates with a strict evaluation, but terminates with lazy evaluation.",
     "omega" ->
       "(\\x -> x x) (\\y -> y y)" -> "infinite beta reductions",
     "non-determ" ->

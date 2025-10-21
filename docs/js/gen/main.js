@@ -1803,8 +1803,8 @@ function $p_Lcaos_frontend_widgets_Widget__drawButton__Lcaos_frontend_widgets_Do
         break matchResult5
       };
       if ((x17 instanceof $c_s_util_Right)) {
-        var x31 = $as_T($as_s_util_Right(x17).s_util_Right__f_value);
-        switch (x31) {
+        var x29 = $as_T($as_s_util_Right(x17).s_util_Right__f_value);
+        switch (x29) {
           case "upload": {
             $m_Lcaos_frontend_widgets_Widget$().uploadSvg__Lcaos_frontend_widgets_DomElem__V(button);
             break matchResult5;
@@ -1821,11 +1821,6 @@ function $p_Lcaos_frontend_widgets_Widget__drawButton__Lcaos_frontend_widgets_Do
             break
           }
           case "help": {
-            $m_Lcaos_frontend_widgets_Widget$().helpSvg__Lcaos_frontend_widgets_DomElem__V(button);
-            break matchResult5;
-            break
-          }
-          case "helpOld": {
             var b$2 = button.append__T__Lcaos_frontend_widgets_DomElem("span");
             b$2.style__T__T__Lcaos_frontend_widgets_DomElem("line-height", "9pt").style__T__T__Lcaos_frontend_widgets_DomElem("padding", "0pt 0pt 4pt 3pt").style__T__T__Lcaos_frontend_widgets_DomElem("color", "#b0b0b0").style__T__T__Lcaos_frontend_widgets_DomElem("text-shadow", "none");
             b$2.html__T__Lcaos_frontend_widgets_DomElem("?");
@@ -1844,7 +1839,7 @@ function $p_Lcaos_frontend_widgets_Widget__drawButton__Lcaos_frontend_widgets_Do
           default: {
             var \u03b4this$tmp2 = this$;
             $m_s_package$();
-            var info$tailLocal1$tmp2 = new $c_s_util_Left(x31);
+            var info$tailLocal1$tmp2 = new $c_s_util_Left(x29);
             this$ = \u03b4this$tmp2;
             info$tailLocal1 = info$tailLocal1$tmp2;
             continue
@@ -1925,7 +1920,7 @@ $c_Lcaos_frontend_widgets_Widget.prototype.panelBox__Lcaos_frontend_widgets_DomE
           $m_s_package$();
           var x$2 = new $c_s_util_Right("help");
           if (((name$1 !== null) && name$1.equals__O__Z(x$2))) {
-            button.style__T__T__Lcaos_frontend_widgets_DomElem("margin-left", "-2pt").style__T__T__Lcaos_frontend_widgets_DomElem("border", "none").style__T__T__Lcaos_frontend_widgets_DomElem("background", "none").style__T__T__Lcaos_frontend_widgets_DomElem("box-shadow", "none").style__T__T__Lcaos_frontend_widgets_DomElem("padding", "3pt").style__T__T__Lcaos_frontend_widgets_DomElem("margin-top", "-16.6pt")
+            button.style__T__T__Lcaos_frontend_widgets_DomElem("margin-left", "-2pt").style__T__T__Lcaos_frontend_widgets_DomElem("border", "none").style__T__T__Lcaos_frontend_widgets_DomElem("background", "none").style__T__T__Lcaos_frontend_widgets_DomElem("box-shadow", "none").style__T__T__Lcaos_frontend_widgets_DomElem("padding", "3pt")
           };
           if ((title$1 !== "")) {
             button.attr__T__T__Lcaos_frontend_widgets_DomElem("title", title$1)
@@ -2016,12 +2011,6 @@ $c_Lcaos_frontend_widgets_Widget$.prototype.uploadSvg__Lcaos_frontend_widgets_Do
   svg.style__T__T__Lcaos_frontend_widgets_DomElem("margin", "-3pt -2pt 0pt");
   svg.append__T__Lcaos_frontend_widgets_DomElem("path").attr__T__T__Lcaos_frontend_widgets_DomElem("d", "M0 0h24v24H0z").attr__T__T__Lcaos_frontend_widgets_DomElem("fill", "none");
   svg.append__T__Lcaos_frontend_widgets_DomElem("path").attr__T__T__Lcaos_frontend_widgets_DomElem("d", "M 12 2 A 1 1 0 0 0 11.292969 2.2949219 L 6.1601562 7.1347656 A 0.5 0.5 0 0 0 6.1484375 7.1445312 L 6.1464844 7.1464844 A 0.5 0.5 0 0 0 6 7.5 A 0.5 0.5 0 0 0 6.5 8 L 10 8 L 10 16 C 10 16.552 10.448 17 11 17 L 12 17 L 13 17 C 13.552 17 14 16.552 14 16 L 14 8 L 17.5 8 A 0.5 0.5 0 0 0 18 7.5 A 0.5 0.5 0 0 0 17.853516 7.1464844 L 17.822266 7.1171875 L 12.716797 2.3027344 A 1 1 0 0 0 12.683594 2.2714844 A 1 1 0 0 0 12 2 z M 3 20 A 1.0001 1.0001 0 1 0 3 22 L 21 22 A 1.0001 1.0001 0 1 0 21 20 L 3 20 z")
-});
-$c_Lcaos_frontend_widgets_Widget$.prototype.helpSvg__Lcaos_frontend_widgets_DomElem__V = (function(block) {
-  var svg = block.append__T__Lcaos_frontend_widgets_DomElem("svg").attr__T__T__Lcaos_frontend_widgets_DomElem("xmlns", "http://www.w3.org/2000/svg").attr__T__T__Lcaos_frontend_widgets_DomElem("width", "20").attr__T__T__Lcaos_frontend_widgets_DomElem("height", "20").attr__T__T__Lcaos_frontend_widgets_DomElem("viewBox", "0 0 24 24").attr__T__T__Lcaos_frontend_widgets_DomElem("fill", "none").attr__T__T__Lcaos_frontend_widgets_DomElem("class", "svgIcon");
-  svg.append__T__Lcaos_frontend_widgets_DomElem("path").attr__T__T__Lcaos_frontend_widgets_DomElem("d", "M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z").attr__T__T__Lcaos_frontend_widgets_DomElem("stroke", "#b0b0b0").attr__T__T__Lcaos_frontend_widgets_DomElem("stroke-width", "2");
-  svg.append__T__Lcaos_frontend_widgets_DomElem("path").attr__T__T__Lcaos_frontend_widgets_DomElem("d", "M10.5 8.67709C10.8665 8.26188 11.4027 8 12 8C13.1046 8 14 8.89543 14 10C14 10.9337 13.3601 11.718 12.4949 11.9383C12.2273 12.0064 12 12.2239 12 12.5V12.5V13").attr__T__T__Lcaos_frontend_widgets_DomElem("stroke", "#b0b0b0").attr__T__T__Lcaos_frontend_widgets_DomElem("stroke-width", "2").attr__T__T__Lcaos_frontend_widgets_DomElem("stroke-linecap", "round").attr__T__T__Lcaos_frontend_widgets_DomElem("stroke-linejoin", "round");
-  svg.append__T__Lcaos_frontend_widgets_DomElem("path").attr__T__T__Lcaos_frontend_widgets_DomElem("d", "M12 16H12.01").attr__T__T__Lcaos_frontend_widgets_DomElem("stroke", "#b0b0b0").attr__T__T__Lcaos_frontend_widgets_DomElem("stroke-width", "2").attr__T__T__Lcaos_frontend_widgets_DomElem("stroke-linecap", "round").attr__T__T__Lcaos_frontend_widgets_DomElem("stroke-linejoin", "round")
 });
 $c_Lcaos_frontend_widgets_Widget$.prototype.checkExceptions__Lcaos_frontend_widgets_OutputArea__T__s_PartialFunction = (function(errorBox, source) {
   var by = ((source !== "") ? ((" by '" + source) + "''") : "");
@@ -19859,43 +19848,46 @@ function $c_Llambda_frontend_CaosConfig$() {
     return $m_Llambda_syntax_Parser$().parseProgram__T__Llambda_syntax_Program$Term(str$1)
   }))(this));
   $m_s_package$();
-  var $$x12 = $m_sr_ScalaRunTime$();
-  var $$x11 = $m_Lcaos_frontend_Configurator$();
+  var $$x14 = $m_sr_ScalaRunTime$();
+  var $$x13 = $m_Lcaos_frontend_Configurator$();
   var self = new $c_T2("succ", "(\\x -> x + 1) 2");
-  var $$x10 = $$x11.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self, "Adds 1 to number 2"));
+  var $$x12 = $$x13.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self, "Adds 1 to number 2"));
+  var $$x11 = $m_Lcaos_frontend_Configurator$();
+  var self$1 = new $c_T2("inf-strict", "((\\x -> \\y -> y)\\n  ((\\x -> x x) (\\x -> x x)))\n  1");
+  var $$x10 = $$x11.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$1, "Example that never terminates with a strict evaluation, but terminates with lazy evaluation."));
   var $$x9 = $m_Lcaos_frontend_Configurator$();
-  var self$1 = new $c_T2("omega", "(\\x -> x x) (\\y -> y y)");
-  var $$x8 = $$x9.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$1, "infinite beta reductions"));
+  var self$2 = new $c_T2("omega", "(\\x -> x x) (\\y -> y y)");
+  var $$x8 = $$x9.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$2, "infinite beta reductions"));
   var $$x7 = $m_Lcaos_frontend_Configurator$();
-  var self$2 = new $c_T2("non-determ", "((\\x -> x + 1) 2) \n+ \n((\\y -> y + 1) 3)");
-  var $$x6 = $$x7.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$2, "non-determinism when evaluating term"));
+  var self$3 = new $c_T2("non-determ", "((\\x -> x + 1) 2) \n+ \n((\\y -> y + 1) 3)");
+  var $$x6 = $$x7.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$3, "non-determinism when evaluating term"));
   var $$x5 = $m_Lcaos_frontend_Configurator$();
-  var self$3 = new $c_T2("if0", "(\\n -> if0 n 1\n   ((\\x -> (x x)) (\\x -> (x x)))\n) (2+2)");
-  var $$x4 = $$x5.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$3, "Example with infinite beta reductions inside a reduceable term, borrowed from https://redex.racket-lang.org/lam-v.html."));
+  var self$4 = new $c_T2("if0", "(\\n -> if0 n 1\n   ((\\x -> (x x)) (\\x -> (x x)))\n) (2+2)");
+  var $$x4 = $$x5.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$4, "Example with infinite beta reductions inside a reduceable term, borrowed from https://redex.racket-lang.org/lam-v.html."));
   var $$x3 = $m_Lcaos_frontend_Configurator$();
-  var self$4 = new $c_T2("triangle", "((\\le -> \n   ((\\f -> (le (\\x -> ((f f) x))))\n    (\\f -> (le (\\x -> ((f f) x))))))\n (\\triangle ->\n   (\\x ->\n     (if0 x\n          0\n          (x + (triangle (x + (-1))))))))");
-  var $$x2 = $$x3.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$4, "Triangle example taken from the SEwPR book - https://redex.racket-lang.org/lam-v.html"));
+  var self$5 = new $c_T2("triangle", "((\\le -> \n   ((\\f -> (le (\\x -> ((f f) x))))\n    (\\f -> (le (\\x -> ((f f) x))))))\n (\\triangle ->\n   (\\x ->\n     (if0 x\n          0\n          (x + (triangle (x + (-1))))))))");
+  var $$x2 = $$x3.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$5, "Triangle example taken from the SEwPR book - https://redex.racket-lang.org/lam-v.html"));
   var $$x1 = $m_Lcaos_frontend_Configurator$();
-  var self$5 = new $c_T2("find-bisim", "((\\y->y y) ((\\x -> x + 1) 2))\n// is bisimlar to\n((\\y->y y) ((\\x -> 5 + x) 27))");
-  var elems = $$x12.wrapRefArray__AO__sci_ArraySeq(new ($d_Lcaos_frontend_Configurator$Example.getArrayOf().constr)([$$x10, $$x8, $$x6, $$x4, $$x2, $$x1.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$5, "Simple example to verify if two terms are bisimilar"))]));
+  var self$6 = new $c_T2("find-bisim", "((\\y->y y) ((\\x -> x + 1) 2))\n// is bisimlar to\n((\\y->y y) ((\\x -> 5 + x) 27))");
+  var elems = $$x14.wrapRefArray__AO__sci_ArraySeq(new ($d_Lcaos_frontend_Configurator$Example.getArrayOf().constr)([$$x12, $$x10, $$x8, $$x6, $$x4, $$x2, $$x1.toExampleDesc__T2__Lcaos_frontend_Configurator$Example(new $c_T2(self$6, "Simple example to verify if two terms are bisimilar"))]));
   this.Llambda_frontend_CaosConfig$__f_examples = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems);
   $m_s_package$();
-  var $$x22 = $m_sr_ScalaRunTime$();
-  var this$28 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$2$1) => ((_$1) => $dp_toString__T(_$1)))(this)), $m_Lcaos_view_Text$());
-  var y = $f_Lcaos_frontend_widgets_WidgetInfo__moveTo__I__Lcaos_frontend_widgets_WidgetInfo(this$28, 1);
-  var $$x21 = new $c_T2("View parsed data", y);
-  var this$32 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$3$1) => ((_$2) => {
+  var $$x24 = $m_sr_ScalaRunTime$();
+  var this$32 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$2$1) => ((_$1) => $dp_toString__T(_$1)))(this)), $m_Lcaos_view_Text$());
+  var y = $f_Lcaos_frontend_widgets_WidgetInfo__moveTo__I__Lcaos_frontend_widgets_WidgetInfo(this$32, 1);
+  var $$x23 = new $c_T2("View parsed data", y);
+  var this$36 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$3$1) => ((_$2) => {
     var _$2$1 = $as_Llambda_syntax_Program$Term(_$2);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(_$2$1)
   }))(this)), new $c_Lcaos_view_Code("haskell"));
-  var y$1 = $f_Lcaos_frontend_widgets_WidgetInfo__moveTo__I__Lcaos_frontend_widgets_WidgetInfo(this$32, 1);
-  var $$x20 = new $c_T2("View pretty data", y$1);
-  var this$35 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$4$1) => ((e) => {
+  var y$1 = $f_Lcaos_frontend_widgets_WidgetInfo__moveTo__I__Lcaos_frontend_widgets_WidgetInfo(this$36, 1);
+  var $$x22 = new $c_T2("View pretty data", y$1);
+  var this$39 = $m_Lcaos_frontend_Configurator$().view__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$4$1) => ((e) => {
     var e$1 = $as_Llambda_syntax_Program$Term(e);
     return $m_Llambda_syntax_Show$().mermaid__Llambda_syntax_Program$Term__T(e$1)
   }))(this)), $m_Lcaos_view_Mermaid$());
-  var y$2 = $f_Lcaos_frontend_widgets_WidgetInfo__moveTo__I__Lcaos_frontend_widgets_WidgetInfo(this$35, 1);
-  var $$x19 = new $c_T2("Diagram of the structure", y$2);
+  var y$2 = $f_Lcaos_frontend_widgets_WidgetInfo__moveTo__I__Lcaos_frontend_widgets_WidgetInfo(this$39, 1);
+  var $$x21 = new $c_T2("Diagram of the structure", y$2);
   var y$3 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$5$1) => ((e$2) => {
     var e$3 = $as_Llambda_syntax_Program$Term(e$2);
     return e$3
@@ -19903,7 +19895,7 @@ function $c_Llambda_frontend_CaosConfig$() {
     var _$3$1 = $as_Llambda_syntax_Program$Term(_$3);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(_$3$1)
   }))(this)), $m_Lcaos_view_Text$());
-  var $$x18 = new $c_T2("Run semantics", y$3);
+  var $$x20 = new $c_T2("Run semantics", y$3);
   var y$4 = $m_Lcaos_frontend_Configurator$().steps__F1__Lcaos_sos_SOS__F1__Lcaos_view_ViewType__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$7$1) => ((e$3$1) => {
     var e$4 = $as_Llambda_syntax_Program$Term(e$3$1);
     return e$4
@@ -19911,7 +19903,7 @@ function $c_Llambda_frontend_CaosConfig$() {
     var e$5 = $as_Llambda_syntax_Program$Term(e$4$1);
     return $m_Llambda_syntax_Show$().mermaid__Llambda_syntax_Program$Term__T(e$5)
   }))(this)), $m_Lcaos_view_Mermaid$());
-  var $$x17 = new $c_T2("Run semantics (with diagrams)", y$4);
+  var $$x19 = new $c_T2("Run semantics (with diagrams)", y$4);
   var y$5 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$9$1) => ((e$5$1) => {
     var e$6 = $as_Llambda_syntax_Program$Term(e$5$1);
     return e$6
@@ -19919,7 +19911,7 @@ function $c_Llambda_frontend_CaosConfig$() {
     var _$4$1 = $as_Llambda_syntax_Program$Term(_$4);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(_$4$1)
   }))(this)), $m_Lcaos_frontend_Configurator$().lts$default$4__F1(), 80);
-  var $$x16 = new $c_T2("Build LTS", y$5);
+  var $$x18 = new $c_T2("Build LTS", y$5);
   var initialSt = new $c_sjsr_AnonFunction1(((this$11$1) => ((e$6$1) => {
     var e$7 = $as_Llambda_syntax_Program$Term(e$6$1);
     return e$7
@@ -19931,7 +19923,7 @@ function $c_Llambda_frontend_CaosConfig$() {
   }))(this));
   var viewAct = $m_Lcaos_frontend_Configurator$().ltsExplore$default$4__F1();
   var y$6 = new $c_Lcaos_frontend_widgets_WidgetInfo$Explore(initialSt, sos, viewSt, viewAct);
-  var $$x15 = new $c_T2("Build LTS (explore)", y$6);
+  var $$x17 = new $c_T2("Build LTS (explore)", y$6);
   var y$7 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$13$1) => ((e$7$1) => {
     var e$8 = $as_Llambda_syntax_Program$Term(e$7$1);
     return e$8
@@ -19939,7 +19931,7 @@ function $c_Llambda_frontend_CaosConfig$() {
     var _$6$1 = $as_Llambda_syntax_Program$Term(_$6);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(_$6$1)
   }))(this)), $m_Lcaos_frontend_Configurator$().lts$default$4__F1(), 80);
-  var $$x14 = new $c_T2("Build LTS - Lazy Evaluation", y$7);
+  var $$x16 = new $c_T2("Build LTS - Lazy Evaluation", y$7);
   var y$8 = $m_Lcaos_frontend_Configurator$().lts__F1__Lcaos_sos_SOS__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo(new $c_sjsr_AnonFunction1(((this$15$1) => ((e$8$1) => {
     var e$9 = $as_Llambda_syntax_Program$Term(e$8$1);
     return e$9
@@ -19947,7 +19939,7 @@ function $c_Llambda_frontend_CaosConfig$() {
     var _$7$1 = $as_Llambda_syntax_Program$Term(_$7);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(_$7$1)
   }))(this)), $m_Lcaos_frontend_Configurator$().lts$default$4__F1(), 80);
-  var $$x13 = new $c_T2("Build LTS - Strict Evaluation", y$8);
+  var $$x15 = new $c_T2("Build LTS - Strict Evaluation", y$8);
   var y$9 = $m_Lcaos_frontend_Configurator$().compareBranchBisim__Lcaos_sos_SOS__Lcaos_sos_SOS__F1__F1__F1__F1__I__Lcaos_frontend_widgets_WidgetInfo($m_Llambda_backend_Semantics$(), $m_Llambda_backend_Semantics$(), new $c_sjsr_AnonFunction1(((this$17$1) => ((_$8) => {
     var _$8$1 = $as_Llambda_syntax_Program$Term(_$8);
     return this$17$1.getApp__Llambda_syntax_Program$Term__Llambda_syntax_Program$Term$App(_$8$1).Llambda_syntax_Program$Term$App__f_e1
@@ -19961,20 +19953,20 @@ function $c_Llambda_frontend_CaosConfig$() {
     var _$11$1 = $as_Llambda_syntax_Program$Term(_$11);
     return $m_Llambda_syntax_Show$().apply__Llambda_syntax_Program$Term__T(_$11$1)
   }))(this)), 5000);
-  var elems$1 = $$x22.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x21, $$x20, $$x19, $$x18, $$x17, $$x16, $$x15, $$x14, $$x13, new $c_T2("Find bisimulation: given 'A B', check if 'A ~ B'", y$9)]));
+  var elems$1 = $$x24.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x23, $$x22, $$x21, $$x20, $$x19, $$x18, $$x17, $$x16, $$x15, new $c_T2("Find bisimulation: given 'A B', check if 'A ~ B'", y$9)]));
   this.Llambda_frontend_CaosConfig$__f_widgets = $m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$1);
   this.Llambda_frontend_CaosConfig$__f_footer = $m_sc_StringOps$().stripMargin$extension__T__C__T("Source code at: <a href=\"https://github.com/arcalab/lambda-caos\" target=\"#\">https://github.com/arcalab/lambda-caos</a>.\n      |This is minimal example to illustrate how to use the\n      |<a target=\"_blank\" href=\"https://github.com/arcalab/CAOS\">CAOS</a>\n      |libraries to generate a web frontend.", 124);
-  var $$x25 = $m_Lcaos_frontend_Configurator$();
+  var $$x27 = $m_Lcaos_frontend_Configurator$();
   $m_s_package$();
-  var $$x24 = $m_sr_ScalaRunTime$();
-  var self$6 = this.Llambda_frontend_CaosConfig$__f_languageName;
-  var self$7 = new $c_T2(self$6, "Press to read more about the input language.");
+  var $$x26 = $m_sr_ScalaRunTime$();
+  var self$7 = this.Llambda_frontend_CaosConfig$__f_languageName;
+  var self$8 = new $c_T2(self$7, "Press to read more about the input language.");
   var y$10 = $m_sc_StringOps$().stripMargin$extension__T__C__T("The input language is a simple lambda term, borrowed from\n        |<a target=\"_blank\" href=\"https://redex.racket-lang.org/lam-v.html\">\n        |https://redex.racket-lang.org/lam-v.html</a> for Racket,\n        |given by the following grammar:\n        |<pre>\n        |  term ::= variable\n        |         | term term\n        |         | \\ variable -> term\n        |         | integer\n        |         | term + term\n        |         | if0 term term term\n        |</pre>", 124);
-  var $$x23 = new $c_T2(self$7, y$10);
-  var self$8 = new $c_T2("Run semantics", "Press to read more about the semantics of the language.");
+  var $$x25 = new $c_T2(self$8, y$10);
+  var self$9 = new $c_T2("Run semantics", "Press to read more about the semantics of the language.");
   var y$11 = $m_sc_StringOps$().stripMargin$extension__T__C__T("<p>The semantics of this lambda calculus is the traditional one,\n        | allowing alpha-reductions and beta-reductions to any of its sub-terms,\n        | enriched with rules to reduce the sum of two integers and to check if\n        | a given term is the integer value 0.</p>\n        |<p>Semantics borrowed from\n        |<a target=\"_blank\" href=\"https://redex.racket-lang.org/lam-v.html\">\n        |https://redex.racket-lang.org/lam-v.html</a> for Racket</p>", 124);
-  var elems$2 = $$x24.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x23, new $c_T2(self$8, y$11)]));
-  this.Llambda_frontend_CaosConfig$__f_documentation = $$x25.toDocumentation__sci_List__Lcaos_frontend_Documentation($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$2))
+  var elems$2 = $$x26.wrapRefArray__AO__sci_ArraySeq(new ($d_T2.getArrayOf().constr)([$$x25, new $c_T2(self$9, y$11)]));
+  this.Llambda_frontend_CaosConfig$__f_documentation = $$x27.toDocumentation__sci_List__Lcaos_frontend_Documentation($m_sci_Nil$().prependedAll__sc_IterableOnce__sci_List(elems$2))
 }
 $c_Llambda_frontend_CaosConfig$.prototype = new $h_O();
 $c_Llambda_frontend_CaosConfig$.prototype.constructor = $c_Llambda_frontend_CaosConfig$;
